@@ -1,0 +1,28 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+function edit(file,from,to){let text=readFileSync(file,'utf8');if(!text.includes(from))throw new Error(`Missing edit target in ${file}: ${from.slice(0,80)}`);writeFileSync(file,text.replace(from,to));}
+edit('tools/build.mjs',"import {finishHero}","import {assurance, trustPage, dataNotice} from './trust-components.mjs';\nimport {finishHero}");
+edit('tools/build.mjs','<a href="/contact">Contact</a></div><button','<a href="/contact">Contact</a><a href="/trust">Trust & engagement</a><a href="/data-notice">Website data</a></div><button');
+edit('tools/build.mjs','<meta name="color-scheme"', '${[\'thank-you\',\'404\'].includes(id)?\'<meta name="robots" content="noindex">\':\'\'}<meta name="color-scheme"');
+edit('tools/build.mjs','<meta name="view-transition"','<link rel="stylesheet" href="/assets/trust.css"><script src="/assets/trust.js" defer></script><meta name="view-transition"');
+edit('tools/build.mjs','}${domainCollection}</main>','}${[\'home\',\'services\',...domains.map(d=>d.route)].includes(id)?domainCollection:\'\'}</main>');
+edit('tools/build.mjs','systems.</p></section>${lab()}<section class="catalogue','systems.</p></section>${assurance}${lab()}<section class="catalogue');
+edit('tools/build.mjs','<p>Fields marked * are required.</p>${form.replace','<p>Fields marked * are required.</p><p class="form-guidance">Share your goals and broad context. Keep passwords, keys, personal records, and confidential security evidence out of this form. <a href="/data-notice">Website data notice</a></p>${form.replace');
+edit('tools/build.mjs','<h3>What happens next</h3>','<h3>What happens next</h3>');
+edit('tools/build.mjs','<div class="contact-symbol"','<a class="text-link" href="/trust">Assessment scope & information sharing '+ '<span aria-hidden="true">↗</span></a><div class="contact-symbol"');
+edit('tools/build.mjs','<label class="check-item consent"><input type="checkbox" name="Consent" required>','<p class="form-guidance">Please keep this request non-sensitive. <a href="/data-notice">How this website handles information</a></p><label class="check-item consent"><input type="checkbox" name="Consent" required>');
+edit('tools/build.mjs',"domainPage(d,data,cta)","domainPage(d,data,d.id==='cyber'?assurance+cta:cta)");
+edit('tools/build.mjs',"page('contact','Thank you'","page('thank-you','Thank you'");
+edit('tools/build.mjs',"writeFileSync(`${out}/robots.txt`",`writeFileSync(\`\${out}/trust.html\`,page('trust','Trust & engagement','Plan a clearly scoped cybersecurity engagement with useful evidence and practical next steps.',trustPage+cta));
+writeFileSync(\`\${out}/data-notice.html\`,page('data-notice','Website data notice','How AnthroPrime website forms, preferences and interactive tools handle information.',dataNotice));
+writeFileSync(\`\${out}/404.html\`,page('404','Page not found','Find the right AnthroPrime expertise or contact the team.',\`<section class="page-hero container"><span class="eyebrow">404 / PAGE NOT FOUND</span><h1>Let’s find your<br><span class="accent">next direction.</span></h1><p>This address does not lead to a page. Explore our capabilities or tell us what you’re looking for.</p><div class="error-links"><a class="button" href="/">Back to home ↗</a><a class="button outline" href="/services">Explore expertise ↗</a></div></section>\`));
+writeFileSync(\`\${out}/robots.txt\``);
+edit('tools/build.mjs',"'growth-advisor','contact',...domains.map", "'growth-advisor','contact','trust','data-notice',...domains.map");
+edit('tools/build.mjs',"+'/services /anthroprime_services.html", "+'/trust /trust.html 200\\n/data-notice /data-notice.html 200\\n/services /anthroprime_services.html");
+edit('tools/build.mjs',"Built eleven static pages", "Built fourteen static pages");
+edit('tools/build.mjs',"||id)}", "||({\'thank-you\':\'thank-you.html\',\'404\':\'404.html\'}[id]||id))}");
+edit('tools/serve.mjs',"const routes={'/':", "const routes={'/trust':'trust.html','/data-notice':'data-notice.html','/':");
+edit('tools/serve.mjs',"catch{res.writeHead(404);res.end('Page not found');}","catch{try{const body=await readFile(resolve(root,'404.html'));res.writeHead(404,{...responseHeaders,'Content-Type':mime['.html']});res.end(req.method==='HEAD'?undefined:body);}catch{res.writeHead(404);res.end('Page not found');}}");
+edit('tools/terminal-component.mjs','Don’t just look.<br><em>Take the controls.</em>','Explore the systems.<br><em>Understand the connections.</em>');
+edit('tools/terminal-component.mjs','An interactive architecture sandbox.','Illustrative scenarios. No real systems connected.');
+edit('netlify.toml','[[headers]]','[[redirects]]\n  from = "/trust"\n  to = "/trust.html"\n  status = 200\n[[redirects]]\n  from = "/data-notice"\n  to = "/data-notice.html"\n  status = 200\n[[headers]]');
+console.log('Applied professional content and navigation refinements.');

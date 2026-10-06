@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+let build=readFileSync('tools/build.mjs','utf8');
+if(!build.includes("import {finishHero}"))build="import {finishHero} from './finishing-components.mjs';\n"+build;
+if(!build.includes('/assets/finishing.css'))build=build.replace('<link rel="stylesheet" href="/assets/learning.css">','<link rel="stylesheet" href="/assets/learning.css"><link rel="stylesheet" href="/assets/finishing.css">');
+if(!build.includes('/assets/finishing.js'))build=build.replace('<script src="/assets/learning.js" defer></script>','<script src="/assets/learning.js" defer></script><script src="/assets/finishing.js" defer></script>');
+build=build.replace('${body.includes(cta)?body.replace(cta,editorialStory(id)+cta):body+editorialStory(id)}','${finishHero(id,body.includes(cta)?body.replace(cta,editorialStory(id)+cta):body+editorialStory(id))}');
+writeFileSync('tools/build.mjs',build);
+let domain=readFileSync('tools/domain-components.mjs','utf8');
+if(!domain.includes("import {robotVisual}"))domain="import {robotVisual} from './finishing-components.mjs';\n"+domain;
+domain=domain.replace('const visual=d=>`','const visual=d=>d.id===\'ai\'?robotVisual():`');
+writeFileSync('tools/domain-components.mjs',domain);

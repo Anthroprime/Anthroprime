@@ -1,0 +1,6 @@
+{
+  "name": "anthroprime", "version": "2.0.0", "private": true, "type": "module",
+  "scripts": { "build": "node tools/build.mjs", "dev": "node tools/serve.mjs", "test": "npm run build && node tools/verify.mjs && node tools/verify-learning.mjs && node tools/verify-motion.mjs && node tools/verify-finishing.mjs && node tools/verify-theme-refinement.mjs && node tools/verify-trust.mjs" },
+  "devDependencies": { "@axe-core/playwright": "^4.10.2", "playwright": "^1.55.0" },
+  "engines": { "node": ">=22" }
+}

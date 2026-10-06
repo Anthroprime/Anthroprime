@@ -1,0 +1,1332 @@
+/* ════════════════════════════════════════════════════════
+   ANTHROPRIME — SHARED SITE SYSTEM
+   Unified header, footer, page transitions, scroll-reveal.
+   Loaded on every page so the chrome never changes.
+════════════════════════════════════════════════════════ */
+
+:root{
+  --gh-bg: rgba(245,244,241,0.86);
+  --gh-bg-scrolled: rgba(245,244,241,0.96);
+  --gh-border: rgba(80,75,65,0.12);
+  --gh-text: #2a2720;
+  --gh-muted: #7a756a;
+  --gh-navy: #1a2744;
+  --gh-navy-mid: #2e4080;
+  --gh-cream: #f5f4f1;
+  --gh-serif: 'Cormorant Garamond', Georgia, serif;
+  --gh-sans: 'DM Sans', system-ui, sans-serif;
+  --gh-ease: cubic-bezier(.65,0,.35,1);
+}
+
+/* ════════════════════════════════════════════════════════
+   DARK MODE — shared header/footer/chrome tokens.
+   Page-specific tokens (--bg, --text, --surface, etc.) are
+   overridden per-page inside each page's own <style> block,
+   since each page defines its own local token set. This block
+   only covers the chrome that lives in this shared stylesheet.
+════════════════════════════════════════════════════════ */
+html[data-theme="dark"]{
+  --gh-bg: rgba(17,18,22,0.86);
+  --gh-bg-scrolled: rgba(17,18,22,0.96);
+  --gh-border: rgba(255,255,255,0.1);
+  --gh-text: #ece9e2;
+  --gh-muted: #9b968c;
+  --gh-navy-mid: #7288d6;
+  --gh-cream: #ece9e2;
+}
+html[data-theme="dark"] .site-links{background:#111216}
+/* Decorative hero layers tagged .dm-hide (inner wedge tint, orbit ring)
+   are light-mode depth cues; on the dark surface they read as stray
+   rectangles, so dark mode hides them. */
+html[data-theme="dark"] .dm-hide{display:none}
+html[data-theme="dark"] .gh-cursor-ring{border-color:rgba(114,136,214,0.5)}
+html[data-theme="dark"] .gh-cursor-hover .gh-cursor-ring{
+  border-color:rgba(114,136,214,0.3); background:rgba(114,136,214,0.12);
+}
+
+/* ── theme toggle button (injected by site.js into .site-right) ── */
+.theme-toggle{
+  width:38px; height:38px; border-radius:50%;
+  border:1px solid var(--gh-border); background:transparent;
+  display:inline-flex; align-items:center; justify-content:center;
+  cursor:pointer; color:var(--gh-text); flex-shrink:0; padding:0;
+  transition:border-color .25s ease, background .25s ease, transform .3s var(--gh-ease);
+}
+.theme-toggle:hover{background:rgba(46,64,128,0.08); transform:translateY(-1px)}
+html[data-theme="dark"] .theme-toggle:hover{background:rgba(114,136,214,0.12)}
+.theme-toggle svg{width:17px; height:17px; display:block}
+.theme-toggle .icon-moon{display:block}
+.theme-toggle .icon-sun{display:none}
+html[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
+@media (max-width:900px){
+  .theme-toggle{margin-right:.5rem}
+}
+
+/* ── progress bar (top hairline reading indicator) ── */
+#site-progress{
+  position:fixed; top:0; left:0; height:2px; width:0%;
+  background:linear-gradient(90deg,var(--gh-navy-mid),#7e8fc7);
+  box-shadow:0 0 12px 0 rgba(126,143,199,0.55);
+  z-index:1100; transition:width .08s linear;
+  pointer-events:none;
+}
+#site-progress.is-loading{transition:width .5s var(--gh-ease)}
+
+/* ── HEADER (identical markup + styling on every page) ── */
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background:var(--gh-bg);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--gh-border);
+  transition:background .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.site-header.is-scrolled{
+  background:var(--gh-bg-scrolled);
+  box-shadow:0 10px 34px -16px rgba(26,39,68,0.22);
+}
+.site-nav{
+  max-width:1480px; margin:0 auto;
+  padding:0 3.5rem; height:72px;
+  display:flex; align-items:center; justify-content:space-between;
+  font-family:var(--gh-sans);
+}
+.site-logo{
+  font-family:var(--gh-serif); font-weight:400; font-size:1.32rem;
+  letter-spacing:.04em; color:var(--gh-text); text-decoration:none;
+  display:inline-flex; align-items:center; gap:.62rem;
+  transition:opacity .2s ease;
+}
+.site-logo:hover{opacity:.75}
+.site-logo em{font-style:italic; color:var(--gh-navy-mid)}
+.site-logo-mark{
+  width:48px; height:48px; border-radius:11px; display:block; flex-shrink:0;
+  box-shadow:0 4px 14px -6px rgba(26,39,68,.45);
+}
+.site-logo-word{line-height:1}
+.site-links{
+  display:flex; gap:2.3rem; list-style:none; align-items:center;
+  margin:0; padding:0;
+}
+.site-links a{
+  color:var(--gh-muted); text-decoration:none; font-size:.8rem;
+  font-weight:500; letter-spacing:.07em; text-transform:uppercase;
+  position:relative; padding:.4rem 0; transition:color .2s ease;
+  white-space:nowrap;
+}
+.site-links a::after{
+  content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
+  background:var(--gh-navy-mid); transition:width .28s var(--gh-ease);
+}
+.site-links a:hover, .site-links a.is-active{color:var(--gh-text)}
+.site-links a:hover::after, .site-links a.is-active::after{width:100%}
+.site-links a.is-active{
+  text-shadow:0 0 12px rgba(46,64,128,0.2);
+}
+html[data-theme="dark"] .site-links a.is-active{
+  text-shadow:0 0 12px rgba(114,136,214,0.3);
+}
+.site-right{display:flex; align-items:center; gap:1.6rem}
+.site-cta{
+  background:var(--gh-navy); color:var(--gh-cream);
+  padding:.62rem 1.5rem; border-radius:3px;
+  font-size:.78rem; font-weight:500; letter-spacing:.07em; text-transform:uppercase;
+  text-decoration:none; display:inline-block;
+  transition:transform .25s var(--gh-ease), box-shadow .25s var(--gh-ease), opacity .2s;
+}
+.site-cta:hover{transform:translateY(-2px); box-shadow:0 14px 28px -12px rgba(26,39,68,.45); opacity:.95}
+.site-cta-mobile{display:none}
+
+.site-burger{
+  display:none; flex-direction:column; gap:5px; width:24px; cursor:pointer;
+  background:none; border:none; padding:.5rem; margin:-0.5rem;
+}
+.site-burger span{
+  display:block; height:1.5px; width:100%; background:var(--gh-text);
+  transition:transform .3s var(--gh-ease), opacity .3s var(--gh-ease);
+}
+.site-burger.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.site-burger.is-open span:nth-child(2){opacity:0}
+.site-burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+@media (max-width:900px){
+  .site-nav{padding:0 1.5rem; height:68px}
+  .site-logo-mark{width:40px; height:40px; border-radius:10px}
+  .site-logo-word{font-size:1.1rem}
+  .site-links{
+    position:fixed; inset:68px 0 0 0; height:calc(100vh - 68px);
+    background:var(--gh-cream); flex-direction:column; justify-content:flex-start;
+    align-items:flex-start; gap:0; padding:1rem 1.75rem;
+    transform:translateX(100%); transition:transform .4s var(--gh-ease);
+    overflow-y:auto;
+  }
+  .site-links.is-open{transform:translateX(0)}
+  .site-links a{width:100%; padding:1.1rem 0; border-bottom:1px solid var(--gh-border); font-size:.95rem}
+  .site-links a::after{display:none}
+  .site-right{gap:0}
+  .site-right .site-cta{display:none}
+  .site-links a.site-cta-mobile{
+    margin-top:1rem; text-align:center; background:var(--gh-navy); color:var(--gh-cream);
+    border-bottom:none; border-radius:3px; display:block;
+  }
+  .site-burger{display:flex}
+}
+
+/* ── FOOTER (identical on every page) ── */
+.site-footer{
+  padding:2.6rem 3.5rem; background:var(--gh-navy);
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:1.25rem; font-family:var(--gh-sans);
+}
+.site-footer-brand{
+  font-family:var(--gh-serif); font-weight:400; font-size:1.05rem;
+  color:rgba(212,218,240,0.55); letter-spacing:.04em;
+  display:inline-flex; align-items:center; gap:.6rem;
+}
+.site-footer-brand em{font-style:italic; color:rgba(212,218,240,0.8)}
+.site-footer-mark{width:22px; height:auto; opacity:.85; display:block; flex-shrink:0}
+.site-footer-copy{font-size:.74rem; color:rgba(212,218,240,0.28); margin-top:.25rem}
+.site-footer-links{display:flex; gap:2rem; flex-wrap:wrap}
+.site-footer-links a{
+  font-size:.74rem; color:rgba(212,218,240,0.4); text-decoration:none;
+  letter-spacing:.06em; text-transform:uppercase; transition:color .2s;
+}
+.site-footer-links a:hover{color:rgba(212,218,240,0.85)}
+@media (max-width:760px){
+  .site-footer{padding:2rem 1.5rem; flex-direction:column; align-items:flex-start}
+}
+
+/* ── PAGE TRANSITION OVERLAY ── */
+#page-transition{
+  position:fixed; inset:0; z-index:9998;
+  background:var(--gh-navy);
+  transform:scaleY(0); transform-origin:bottom;
+  pointer-events:none; will-change:transform;
+}
+#page-transition::after{
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(circle at 50% 50%, rgba(212,218,240,0.08), transparent 60%);
+}
+body.is-leaving #page-transition{
+  transform-origin:bottom;
+  animation:gh-cover .5s var(--gh-ease) forwards;
+}
+body.is-entering #page-transition{
+  transform:scaleY(1); transform-origin:top;
+  animation:gh-reveal .6s .05s var(--gh-ease) forwards;
+}
+@keyframes gh-cover{ from{transform:scaleY(0)} to{transform:scaleY(1)} }
+@keyframes gh-reveal{ from{transform:scaleY(1)} to{transform:scaleY(0)} }
+body.is-leaving{cursor:progress}
+
+/* fade the outgoing page content slightly as the wipe begins */
+body.is-leaving > *:not(#page-transition){
+  transition:opacity .35s ease;
+  opacity:.35;
+}
+
+/* ── SCROLL REVEAL ── */
+[data-reveal]{
+  opacity:0; transform:translateY(28px);
+  transition:opacity .8s var(--gh-ease), transform .8s var(--gh-ease);
+  will-change:opacity, transform;
+}
+[data-reveal].in-view{opacity:1; transform:translateY(0)}
+[data-reveal="fade"]{transform:none}
+[data-reveal="fade"].in-view{transform:none}
+[data-reveal-group] > *{
+  opacity:0; transform:translateY(22px);
+  transition:opacity .7s var(--gh-ease), transform .7s var(--gh-ease);
+}
+[data-reveal-group].in-view > *{opacity:1; transform:translateY(0)}
+[data-reveal-group].in-view > *:nth-child(1){transition-delay:.03s}
+[data-reveal-group].in-view > *:nth-child(2){transition-delay:.09s}
+[data-reveal-group].in-view > *:nth-child(3){transition-delay:.15s}
+[data-reveal-group].in-view > *:nth-child(4){transition-delay:.21s}
+[data-reveal-group].in-view > *:nth-child(5){transition-delay:.27s}
+[data-reveal-group].in-view > *:nth-child(6){transition-delay:.33s}
+
+@media (prefers-reduced-motion: reduce){
+  [data-reveal], [data-reveal-group] > *{opacity:1 !important; transform:none !important; transition:none !important}
+  #page-transition{display:none !important}
+  body.is-leaving > *:not(#page-transition){opacity:1 !important}
+}
+
+/* subtle smooth hover-lift utility reused by cards across pages */
+
+/* ════════════════════════════════════════════════════════
+   AMBIENT NETWORK MESH BACKGROUND
+   A quiet, drifting node-and-line canvas — evokes a live data /
+   security network. Auto-mounted by site.js on any element
+   carrying [data-mesh-bg]; drawn behind that element's own
+   content (canvas is z-index 0, inserted as first child).
+════════════════════════════════════════════════════════ */
+[data-mesh-bg]{position:relative}
+.gh-mesh-canvas{
+  position:absolute; inset:0; width:100%; height:100%;
+  display:block; z-index:0; pointer-events:none;
+}
+@media (prefers-reduced-motion: reduce){
+  .gh-mesh-canvas{display:none}
+}
+
+/* ── travelling "data packet" dots along the hero orbit lines ── */
+@keyframes packet-move{
+  0%{transform:translate(0,0); opacity:0}
+  9%{opacity:1}
+  44%{transform:translate(var(--pdx,0),var(--pdy,0)); opacity:1}
+  56%{opacity:0}
+  100%{transform:translate(var(--pdx,0),var(--pdy,0)); opacity:0}
+}
+
+/* ── capability card glyphs: small animated AI / data / cloud / security icons ── */
+.cap-icon{width:32px; height:32px; display:block; margin-bottom:.35rem; overflow:visible}
+.cap-icon-ai .ai-node{transform-box:fill-box; transform-origin:center; animation:ai-pulse 2.6s ease-in-out infinite}
+.cap-icon-ai .ai-node:nth-child(2){animation-delay:.3s}
+.cap-icon-ai .ai-node:nth-child(3){animation-delay:.6s}
+.cap-icon-ai .ai-node:nth-child(4){animation-delay:.9s}
+@keyframes ai-pulse{0%,100%{transform:scale(.75); opacity:.55}50%{transform:scale(1.2); opacity:1}}
+
+.cap-icon-data .data-bar{transform-box:fill-box; transform-origin:bottom; animation:data-rise 2.2s ease-in-out infinite}
+.cap-icon-data .data-bar:nth-child(2){animation-delay:.22s}
+.cap-icon-data .data-bar:nth-child(3){animation-delay:.44s}
+@keyframes data-rise{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+
+.cap-icon-cloud .cloud-shape{transform-box:fill-box; transform-origin:center; animation:cloud-drift 4.8s ease-in-out infinite}
+.cap-icon-cloud .cloud-pulse{animation:cloud-pulse 4.8s ease-in-out infinite}
+@keyframes cloud-drift{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+@keyframes cloud-pulse{0%,100%{opacity:.25}50%{opacity:.7}}
+
+.cap-icon-security .scan-line{animation:shield-scan 2.8s ease-in-out infinite}
+@keyframes shield-scan{0%{transform:translateY(-8px); opacity:0}18%{opacity:1}82%{opacity:1}100%{transform:translateY(8px); opacity:0}}
+
+@media (prefers-reduced-motion:reduce){
+  .cap-icon *{animation:none !important}
+}
+
+/* ════════════════════════════════════════════════════════
+   INTERACTIVE LAYER
+   Custom cursor, mouse-tracked card spotlights, magnetic
+   buttons, and glass surfaces. Injected only on fine-pointer,
+   non-reduced-motion devices — see site.js for the gating.
+════════════════════════════════════════════════════════ */
+
+/* ── custom cursor: replaces the system arrow with a dot + trailing ring ── */
+.gh-has-cursor{cursor:none}
+.gh-has-cursor a, .gh-has-cursor button, .gh-has-cursor [role="button"]{cursor:none}
+
+.gh-cursor-dot, .gh-cursor-ring{
+  position:fixed; top:0; left:0; z-index:10000;
+  pointer-events:none; opacity:0; will-change:transform;
+}
+.gh-cursor-dot{
+  width:6px; height:6px; border-radius:50%;
+  background:var(--gh-navy-mid);
+  transition:opacity .25s ease, background .25s ease, width .2s var(--gh-ease), height .2s var(--gh-ease);
+}
+.gh-cursor-ring{
+  width:34px; height:34px; border-radius:50%;
+  border:1px solid rgba(46,64,128,0.45);
+  transition:opacity .3s ease, width .25s var(--gh-ease), height .25s var(--gh-ease), border-color .25s ease, background .25s ease;
+}
+.gh-cursor-hover .gh-cursor-dot{width:8px; height:8px; background:#fff}
+.gh-cursor-hover .gh-cursor-ring{
+  width:56px; height:56px;
+  border-color:rgba(46,64,128,0.18);
+  background:rgba(46,64,128,0.08);
+  backdrop-filter:blur(2px);
+}
+.gh-cursor-down .gh-cursor-ring{width:28px; height:28px}
+
+@media (max-width:900px){
+  .gh-cursor-dot, .gh-cursor-ring{display:none}
+  .gh-has-cursor{cursor:auto}
+}
+
+/* ── card spotlight: a soft light that tracks the pointer across any *-card element ── */
+.gh-spot-glow{
+  position:absolute; inset:0; z-index:2; pointer-events:none;
+  opacity:0; border-radius:inherit;
+  background:radial-gradient(260px circle at var(--spot-x,50%) var(--spot-y,50%), rgba(255,255,255,0.5), transparent 68%);
+  mix-blend-mode:soft-light;
+  transition:opacity .45s ease;
+}
+.gh-spotlighting > .gh-spot-glow{opacity:1}
+
+/* ── magnetic buttons: small pointer-following nudge, spring back via transition on release ── */
+.gh-magnetic{transition:transform .45s var(--gh-ease), opacity .2s, box-shadow .25s var(--gh-ease)}
+.gh-magnetic:hover{transition:transform .12s linear, opacity .2s, box-shadow .25s var(--gh-ease)}
+
+/* ── hero diagram parallax: smoothed drift as the pointer moves through the hero ── */ .hero-ring{transition:transform .35s var(--gh-ease)}
+
+/* ── glass utility: frosted surface for overlays / panels that opt in ── */
+
+@media (prefers-reduced-motion: reduce){
+  .gh-cursor-dot, .gh-cursor-ring{display:none !important}
+  .gh-spot-glow{display:none !important}
+  .gh-magnetic{transform:none !important}
+}
+
+/* ════════════════════════════════════════════════════════
+   ANIMATED HERO DIAGRAMS — right-side visuals per page.
+   Each diagram is an SVG positioned in the hero's right
+   area with CSS animations for pulsing, orbiting, drawing.
+════════════════════════════════════════════════════════ */
+
+/* ── Generic diagram container ── */
+
+/* ── Orbit-style shared animations ── */
+@keyframes diagram-pulse{
+  0%,100%{ transform:scale(1); opacity:0.85; }
+  50%{ transform:scale(1.08); opacity:1; }
+}
+@keyframes diagram-draw{ to{ stroke-dashoffset:0; } }
+
+/* ── Data flow packets (travelling dots) ── */
+@keyframes diagram-packet-flow{
+  0%{ opacity:0; transform:translate(0,0); }
+  10%{ opacity:1; }
+  70%{ opacity:1; }
+  100%{ opacity:0; transform:translate(var(--dx,50px),var(--dy,-50px)); }
+}
+
+/* ── Rotating ring for growth/advisor pages ── */
+@keyframes diagram-spin{ to{ transform:rotate(360deg); } }
+
+/* ── Animated counter (numbers that count up on reveal) ── */
+
+/* ── Scroll indicator bounce ── */
+.scroll-indicator{
+  position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+  z-index:2; opacity:0.5; transition:opacity 0.3s;
+}
+.scroll-indicator:hover{ opacity:0.8; }
+.scroll-indicator span{
+  font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:rgba(212,218,240,0.6);
+}
+.scroll-indicator .scroll-arrow{
+  width:16px; height:16px; border-right:1.5px solid rgba(212,218,240,0.5);
+  border-bottom:1.5px solid rgba(212,218,240,0.5);
+  transform:rotate(45deg); animation:scroll-bounce 2s ease-in-out infinite;
+}
+@keyframes scroll-bounce{
+  0%,100%{ transform:rotate(45deg) translate(0,0); opacity:0.5; }
+  50%{ transform:rotate(45deg) translate(4px,4px); opacity:1; }
+}
+
+/* ── Typewriter cursor blink ── */
+@keyframes cursor-blink{ 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── Card hover glow enhancement ── */
+.cap-card:hover .cap-icon,
+.service-card:hover .service-number,
+.framework-card:hover .framework-badge{
+  transition: color 0.3s, opacity 0.3s;
+}
+
+/* ── Fade-in-up utility for staggered sections ── */
+
+/* ── Pulse glow for CTA buttons ── */
+.btn-solid::after, .btn-navy::after{
+  content:''; position:absolute; inset:-2px; border-radius:inherit;
+  background:transparent; opacity:0; transition:opacity 0.3s;
+  box-shadow: 0 0 20px 4px rgba(46,64,128,0.2);
+  pointer-events:none;
+}
+.btn-solid, .btn-navy{ position:relative; overflow:visible; }
+.btn-solid:hover::after, .btn-navy:hover::after{ opacity:1; }
+
+@media (prefers-reduced-motion:reduce){
+  .scroll-indicator .scroll-arrow{ animation:none !important; }
+  .back-to-top{ display:none !important; }
+}
+
+/* ════════════════════════════════════════════════════════
+   BACK TO TOP BUTTON — appears after scrolling down.
+════════════════════════════════════════════════════════ */
+.back-to-top{
+  position:fixed; bottom:2rem; right:2rem; z-index:900;
+  width:42px; height:42px; border-radius:50%;
+  background:var(--gh-navy, var(--navy, #1a2744));
+  color:#f5f4f1; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(10px);
+  transition:opacity 0.3s ease, transform 0.3s ease, background 0.2s;
+  pointer-events:none;
+  box-shadow:0 4px 16px -4px rgba(26,39,68,0.4);
+}
+.back-to-top.visible{
+  opacity:0.85; transform:translateY(0); pointer-events:auto;
+}
+.back-to-top:hover{
+  opacity:1; background:var(--gh-navy-mid, var(--navy-mid, #2e4080));
+  transform:translateY(-2px);
+}
+.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+@media(max-width:600px){
+  .back-to-top{bottom:1.2rem;right:1.2rem;width:38px;height:38px}
+}
+
+/* ════════════════════════════════════════════════════════
+   FLOATING ANIMATION — gentle up-and-down drift.
+════════════════════════════════════════════════════════ */
+@keyframes float-drift{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px); }
+}
+
+/* ════════════════════════════════════════════════════════
+   GLOW PULSE — for key interactive elements.
+════════════════════════════════════════════════════════ */
+
+/* ════════════════════════════════════════════════════════
+   SECTION HEADING UNDERLINE ANIMATION.
+════════════════════════════════════════════════════════ */
+.animated-heading{
+  position:relative; display:inline-block;
+}
+.animated-heading::after{
+  content:''; position:absolute; bottom:-8px; left:0;
+  width:0; height:2px;
+  background:linear-gradient(90deg, var(--navy-mid, #2e4080), var(--sp-accent, #b8a080));
+  transition:width 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.animated-heading.in-view::after{ width:60px; }
+
+/* ════════════════════════════════════════════════════════
+   SMOOTH THEME TRANSITION — applied when toggling dark/light.
+════════════════════════════════════════════════════════ */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after{
+  transition: background-color 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* ════════════════════════════════════════════════════════
+   MODERN INTERACTIVE REFRESH — Aurora layers, glass,
+   HUD chips, shine, and richer dark-mode cuing.
+   Appended so the original design language is preserved;
+   this layer only adds depth, motion, and polish.
+════════════════════════════════════════════════════════ */
+
+:root{
+  --ap-aurora-a: rgba(46,64,128,0.20);
+  --ap-aurora-b: rgba(114,136,214,0.20);
+  --ap-aurora-c: rgba(184,160,128,0.15);
+  --ap-glass: rgba(255,255,255,0.55);
+  --ap-glass-border: rgba(255,255,255,0.5);
+  --ap-ring: rgba(114,136,214,0.35);
+  --ap-ring-soft: rgba(114,136,214,0.16);
+  --ap-shadow: 0 24px 70px -30px rgba(26,39,68,0.35);
+  --ap-shadow-glow: 0 0 0 1px rgba(114,136,214,0.10), 0 26px 70px -28px rgba(26,39,68,0.45);
+  --ap-grid-line: rgba(26,39,68,0.05);
+  --ap-grid-dot: rgba(46,64,128,0.16);
+  --ap-scan: rgba(114,136,214,0.08);
+  --ap-accent-grad: linear-gradient(120deg,#7288d6,#8ea0e0 42%,#c9b190);
+  font-synthesis:none;
+}
+html[data-theme="dark"]{
+  --ap-aurora-a: rgba(114,136,214,0.16);
+  --ap-aurora-b: rgba(184,160,128,0.10);
+  --ap-aurora-c: rgba(46,64,128,0.22);
+  --ap-glass: rgba(255,255,255,0.04);
+  --ap-glass-border: rgba(255,255,255,0.10);
+  --ap-ring: rgba(114,136,214,0.38);
+  --ap-ring-soft: rgba(114,136,214,0.15);
+  --ap-shadow: 0 28px 80px -32px rgba(0,0,0,0.65);
+  --ap-shadow-glow: 0 0 0 1px rgba(114,136,214,0.14), 0 30px 80px -34px rgba(0,0,0,0.8);
+  --ap-grid-line: rgba(255,255,255,0.035);
+  --ap-grid-dot: rgba(114,136,214,0.22);
+  --ap-scan: rgba(114,136,214,0.12);
+}
+
+/* ── Ambient aurora + cyber grid (injected by site.js) ── */
+.site-aurora,.site-grid,.site-noise,.site-scanline{
+  position:absolute; inset:0; pointer-events:none; overflow:hidden; border-radius:inherit;
+}
+.site-aurora{z-index:0}
+.site-grid{z-index:0}
+.site-noise{z-index:1; opacity:.5; mix-blend-mode:soft-light}
+.site-grid{
+  background-image:
+    linear-gradient(var(--ap-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ap-grid-line) 1px, transparent 1px);
+  background-size:54px 54px;
+  -webkit-mask-image:radial-gradient(120% 90% at 70% 40%, #000 0%, transparent 72%);
+  mask-image:radial-gradient(120% 90% at 70% 40%, #000 0%, transparent 72%);
+  animation:grid-drift 22s linear infinite;
+}
+@keyframes grid-drift{ to{ background-position:54px 54px; background-position:54px 54px; } }
+.site-aurora::before,.site-aurora::after{
+  content:''; position:absolute; width:46vw; height:46vw; border-radius:50%;
+  filter:blur(70px); opacity:.75; will-change:transform;
+  animation:aurora-drift 22s ease-in-out infinite;
+}
+.site-aurora::before{background:radial-gradient(circle at 30% 30%, var(--ap-aurora-a), transparent 62%); top:-18%; left:-8%}
+.site-aurora::after{background:radial-gradient(circle at 70% 70%, var(--ap-aurora-b), transparent 62%); bottom:-22%; right:-12%; animation-delay:-9s}
+html[data-theme="dark"] .site-aurora::before,
+html[data-theme="dark"] .site-aurora::after{
+  filter:blur(80px) saturate(150%);
+}
+@keyframes aurora-drift{
+  0%,100%{transform:translate3d(-3%,-2%,0) scale(1)}
+  50%{transform:translate3d(6%,5%,0) scale(1.08)}
+}
+.site-scanline{
+  z-index:1; height:34vh; top:-20vh; bottom:auto;
+  background:linear-gradient(180deg,transparent,var(--ap-scan),transparent);
+  filter:blur(10px);
+  animation:scan-drop 9s cubic-bezier(.4,0,.2,1) infinite;
+}
+@keyframes scan-drop{
+  0%{transform:translateY(-45vh)}
+  55%,100%{transform:translateY(120vh)}
+}
+
+/* ── glass card / panel refresh — theme-aware, never wash out copy ── */
+html .service-card, html .industry-card, html .framework-card, html .checklist-card,
+html .coverage-item, html .philosophy-card, html .card, html .grid-card{
+  border:1px solid color-mix(in srgb, var(--border, var(--ap-glass-border)) 80%, transparent);
+  background:color-mix(in srgb, var(--surface, #faf9f7) 88%, transparent);
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  box-shadow:var(--ap-shadow);
+  transition:transform .35s var(--gh-ease), box-shadow .35s var(--gh-ease), border-color .35s ease, background .35s ease;
+}
+html .cap-card, html .pillar, html .outcome-item{
+  background:color-mix(in srgb, var(--surface, #faf9f7) 70%, transparent);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  transition:transform .35s var(--gh-ease), box-shadow .35s var(--gh-ease), background .35s ease;
+}
+/* Navy-surface steps keep a dark glass, not a white wash */
+html .p-step, html .a-step{
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(10px) saturate(130%);
+  -webkit-backdrop-filter:blur(10px) saturate(130%);
+  transition:transform .35s var(--gh-ease), box-shadow .35s var(--gh-ease), background .35s ease;
+}
+html[data-theme="dark"] .cap-card,
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .industry-card,
+html[data-theme="dark"] .framework-card,
+html[data-theme="dark"] .checklist-card,
+html[data-theme="dark"] .coverage-item,
+html[data-theme="dark"] .pillar,
+html[data-theme="dark"] .outcome-item,
+html[data-theme="dark"] .philosophy-card,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .grid-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+  border-color:rgba(255,255,255,.1);
+  color:inherit;
+}
+html .service-card:hover, html .industry-card:hover, html .framework-card:hover,
+html .checklist-card:hover, html .coverage-item:hover, html .philosophy-card:hover,
+html .card:hover, html .grid-card:hover,
+html .cap-card:hover, html .pillar:hover, html .outcome-item:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--ap-shadow-glow);
+  border-color:rgba(114,136,214,.45);
+}
+html .p-step:hover, html .a-step:hover{
+  background:rgba(255,255,255,.06);
+  box-shadow:0 18px 40px -28px rgba(0,0,0,.45);
+}
+html .cap-card, html .pillar, html .outcome-item, html .p-step,
+html .a-step, html .service-card, html .framework-card, html .industry-card,
+html .checklist-card, html .philosophy-card, html .card, html .grid-card{
+  position:relative; overflow:hidden;
+}
+
+/* shine sweep on hover */
+.cap-card::before,.service-card::before,.framework-card::before,.industry-card::before,
+.checklist-card::before,.pillar::before,.outcome-item::before{
+  content:''; position:absolute; top:-120%; left:-60%; width:55%; height:320%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:rotate(18deg); opacity:0; pointer-events:none; z-index:1;
+  transition:opacity .4s ease, transform .8s var(--gh-ease);
+}
+.cap-card:hover::before,.service-card:hover::before,.framework-card:hover::before,
+.industry-card:hover::before,.checklist-card:hover::before,.pillar:hover::before,
+.outcome-item:hover::before{
+  opacity:.65; transform:rotate(18deg) translateX(290%);
+}
+html[data-theme="dark"] .cap-card::before,
+html[data-theme="dark"] .service-card::before,
+html[data-theme="dark"] .framework-card::before,
+html[data-theme="dark"] .industry-card::before,
+html[data-theme="dark"] .checklist-card::before,
+html[data-theme="dark"] .pillar::before,
+html[data-theme="dark"] .outcome-item::before{
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);
+}
+
+/* buttons get a glass glow */
+.site-cta,.btn-solid,.btn-navy,.btn-primary,.cta-btn{
+  backdrop-filter:blur(10px);
+  box-shadow:0 18px 40px -18px rgba(26,39,68,.55), inset 0 1px 0 rgba(255,255,255,.18);
+  background:linear-gradient(135deg,var(--navy,#1a2744),var(--navy2,var(--navy-mid,#2e4080)));
+  border:1px solid rgba(114,136,214,.22);
+}
+html[data-theme="dark"] .site-cta,
+html[data-theme="dark"] .btn-solid,
+html[data-theme="dark"] .btn-navy,
+html[data-theme="dark"] .btn-primary{
+  background:linear-gradient(135deg,#33406c,#243157);
+  box-shadow:0 18px 44px -18px rgba(114,136,214,.45), inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+/* ════════════════════════════════════════════════════════
+   MODERN HERO DIAGRAMS — next-gen cyber/data/cloud/AI look
+   Applied on top of the original diagram. Adds gradient
+   glows, glass nodes, data streams, and orbit sweeps.
+════════════════════════════════════════════════════════ */
+@keyframes diagram-stream{ to{ stroke-dashoffset:-34px; } }
+
+/* glass node panels */
+
+/* modern per-discipline node classes (used in new marks) */
+@keyframes dg-packet{
+  0%{opacity:0; transform:translate(0,0) scale(.6)}
+  14%{opacity:1; transform:scale(1)}
+  82%{opacity:1}
+  100%{opacity:0; transform:translate(var(--dx,0),var(--dy,0)) scale(.5)}
+}
+@keyframes dg-rotate{ to{ transform:rotate(360deg) } }
+
+/* Dark mode must never hide copy, numbers, or diagrams.
+   Contrast is handled in the v2 safety-net at the end of this file. */
+html[data-theme="dark"] .stat-num,
+html[data-theme="dark"] .hero-bottom .count-label{font-variant-numeric:tabular-nums}
+html[data-theme="dark"] .hero-ring, html[data-theme="dark"] .hero-band-inner{opacity:.55}
+
+/* ── gradient text accent (subtle energy in headings) ── */
+
+/* ── animated count highlight used on stats ── */
+@keyframes line-breathe{0%,100%{transform:scaleX(.35); opacity:.3}50%{transform:scaleX(1); opacity:.9}}
+
+@media (prefers-reduced-motion: reduce){
+  .site-grid,.site-scanline,.site-aurora::before,.site-aurora::after{animation:none !important}
+  .cap-card::before,.service-card::before,.framework-card::before{display:none !important}
+}
+
+/* ── pointer ripple ── */
+.ap-ripple{
+  position:absolute; width:12px; height:12px; border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,.7), rgba(255,255,255,0) 60%);
+  transform:translate(-50%,-50%) scale(0); pointer-events:none; z-index:6;
+  mix-blend-mode:screen; animation:ripple-pulse .8s var(--gh-ease) forwards;
+}
+html[data-theme="dark"] .ap-ripple{
+  background:radial-gradient(circle, rgba(142,160,224,.8), rgba(142,160,224,0) 60%);
+}
+@keyframes ripple-pulse{
+  0%{transform:translate(-50%,-50%) scale(0); opacity:.9}
+  100%{transform:translate(-50%,-50%) scale(18); opacity:0}
+}
+@media (prefers-reduced-motion: reduce){ .ap-ripple{display:none !important} }
+
+/* keep hero ambient layers behind hero content that isn't explicitly z-indexed */
+.hero-content, .hero-bottom, .hero-content-inner, .prac-hero-inner,
+.contact-hero-inner, .hero-quicklinks{position:relative; z-index:2}
+.site-aurora, .site-grid, .site-noise, .site-scanline{z-index:0}
+.hero-ring{z-index:0}
+
+/* ════════════════════════════════════════════════════════
+   V2 — COHESIVE REFRESH
+   Unique AI / cyber / data diagrams, pointer light, and a
+   dark-mode contrast safety net that never hides copy.
+════════════════════════════════════════════════════════ */
+
+html{color-scheme:light}
+html[data-theme="dark"]{color-scheme:dark}
+
+::selection{background:rgba(46,64,128,.22); color:inherit}
+html[data-theme="dark"] ::selection{background:rgba(114,136,214,.38); color:#f6f3ec}
+
+body::before{
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:
+    radial-gradient(1100px 620px at 8% -12%, rgba(46,64,128,.10), transparent 58%),
+    radial-gradient(900px 520px at 110% 0%, rgba(184,160,128,.08), transparent 55%);
+}
+html[data-theme="dark"] body::before{
+  background:
+    radial-gradient(1100px 620px at 8% -12%, rgba(114,136,214,.16), transparent 58%),
+    radial-gradient(900px 520px at 110% 0%, rgba(184,160,128,.07), transparent 55%);
+}
+
+/* pointer-follow light injected into heroes */
+
+/* ── Diagram stage (frosted orb behind unique SVGs) ── */
+@keyframes viz-breathe{
+  0%,100%{transform:scale(1); opacity:.85}
+  50%{transform:scale(1.06); opacity:1}
+}
+
+/* ── Unique diagram language ── */
+@keyframes ap-blip{
+  0%,100%{opacity:.25; transform:scale(.7)}
+  50%{opacity:1; transform:scale(1.15)}
+}
+@keyframes ap-scan-move{
+  0%{transform:translateY(-28px); opacity:0}
+  18%{opacity:.85}
+  82%{opacity:.85}
+  100%{transform:translateY(28px); opacity:0}
+}
+
+/* Focus state — hover a node, dim the rest */
+
+/* ── Dark-mode contrast safety net ──
+   Token reuse (--white as both page bg AND on-navy text, --bg as
+   headline color on navy heroes, --navy as body copy on dark cards)
+   is what was swallowing copy. These rules restore luminous type
+   on dark surfaces and ink on cards — nothing is display:none. */
+html[data-theme="dark"] .services-hero,
+html[data-theme="dark"] .prac-hero,
+html[data-theme="dark"] .contact-hero,
+html[data-theme="dark"] .growth-spotlight,
+html[data-theme="dark"] .approach,
+html[data-theme="dark"] .people-band,
+html[data-theme="dark"] .bottleneck,
+html[data-theme="dark"] .bg-navy,
+html[data-theme="dark"] .closer,
+html[data-theme="dark"] .founder-box,
+html[data-theme="dark"] .pillar-card,
+html[data-theme="dark"] .bench-card,
+html[data-theme="dark"] .detail-card.dark,
+html[data-theme="dark"] .cad-card.now,
+html[data-theme="dark"] .bn-card,
+html[data-theme="dark"] .bn-card.accent,
+html[data-theme="dark"] .side-card:not(.light),
+html[data-theme="dark"] .sub-services-panel,
+html[data-theme="dark"] .service-card.expanded{
+  color:#f3f0ea;
+}
+
+html[data-theme="dark"] .hero-headline,
+html[data-theme="dark"] .prac-hero h1,
+html[data-theme="dark"] .contact-hero h1,
+html[data-theme="dark"] .services-hero h1,
+html[data-theme="dark"] .bg-navy h2,
+html[data-theme="dark"] .closer h2,
+html[data-theme="dark"] .bottleneck h2,
+html[data-theme="dark"] .approach-left h2,
+html[data-theme="dark"] .people-intro h2{
+  color:#f6f3ec !important;
+}
+
+html[data-theme="dark"] .hero-sub,
+html[data-theme="dark"] .prac-hero-sub,
+html[data-theme="dark"] .contact-hero p,
+html[data-theme="dark"] .bg-navy .lede,
+html[data-theme="dark"] .closer .lede,
+html[data-theme="dark"] .people-intro p,
+html[data-theme="dark"] .approach-left p{
+  color:rgba(236,233,226,.72) !important;
+}
+
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .btn-ghost:not(.on-light),
+html[data-theme="dark"] .btn-solid,
+html[data-theme="dark"] .btn-navy,
+html[data-theme="dark"] .site-cta,
+html[data-theme="dark"] .cta-btn,
+html[data-theme="dark"] .btn-submit{
+  color:#f6f3ec;
+}
+
+html[data-theme="dark"] .obj-card h3,
+html[data-theme="dark"] .cad-card:not(.now) h3,
+html[data-theme="dark"] .bound-card h3,
+html[data-theme="dark"] .client-card h3,
+html[data-theme="dark"] .philo-copy .quote-line,
+html[data-theme="dark"] .box-caption,
+html[data-theme="dark"] .box-caption b,
+html[data-theme="dark"] .detail-card:not(.dark) h3,
+html[data-theme="dark"] .detail-card:not(.dark) li,
+html[data-theme="dark"] .approach-name,
+html[data-theme="dark"] .framework-name,
+html[data-theme="dark"] .ladder-name,
+html[data-theme="dark"] .checklist-name,
+html[data-theme="dark"] .industry-name,
+html[data-theme="dark"] .service-name,
+html[data-theme="dark"] .pillar-title,
+html[data-theme="dark"] .form-card h2,
+html[data-theme="dark"] .form-card,
+html[data-theme="dark"] .side-card.light,
+html[data-theme="dark"] .side-card.light h3,
+html[data-theme="dark"] .side-card.light .side-item a,
+html[data-theme="dark"] .side-card.light .side-item p,
+html[data-theme="dark"] .scheduler-header h2,
+html[data-theme="dark"] .sched-summary strong,
+html[data-theme="dark"] .bound-card.do li,
+html[data-theme="dark"] .bound-card.dont li,
+html[data-theme="dark"] .chk-text,
+html[data-theme="dark"] .sla-row span:last-child{
+  color:var(--ink, var(--text, #ece9e2)) !important;
+}
+
+html[data-theme="dark"] .cad-card.now h3,
+html[data-theme="dark"] .cad-card.now p,
+html[data-theme="dark"] .detail-card.dark h3,
+html[data-theme="dark"] .detail-card.dark li,
+html[data-theme="dark"] .detail-card.dark .sub,
+html[data-theme="dark"] .pillar-card h3,
+html[data-theme="dark"] .pillar-card p,
+html[data-theme="dark"] .bench-card h3,
+html[data-theme="dark"] .bench-card p,
+html[data-theme="dark"] .hstat b,
+html[data-theme="dark"] .hstat span,
+html[data-theme="dark"] .service-card.expanded .service-name,
+html[data-theme="dark"] .service-card.expanded .service-tagline{
+  color:#f6f3ec !important;
+}
+
+html[data-theme="dark"] .hstat span,
+html[data-theme="dark"] .pillar-card p,
+html[data-theme="dark"] .bench-card p,
+html[data-theme="dark"] .cad-card.now p{
+  color:rgba(236,233,226,.7) !important;
+}
+
+html[data-theme="dark"] .pillar-chip.active{
+  background:#eef1fb !important;
+  color:#1a2744 !important;
+}
+html[data-theme="dark"] .pillar-chip:not(.active){
+  color:rgba(245,244,241,.72);
+}
+html[data-theme="dark"] .form-error{color:#f0c4a8}
+html[data-theme="dark"] .a-step-num,
+html[data-theme="dark"] .p-step-num{
+  color:rgba(212,218,240,.22);
+  display:block;
+}
+html[data-theme="dark"] .coverage-item-num,
+html[data-theme="dark"] .service-hero::before{
+  display:revert;
+  color:rgba(236,233,226,.16);
+}
+html[data-theme="dark"] .service-card:hover,
+html[data-theme="dark"] .framework-card:hover,
+html[data-theme="dark"] .industry-card:hover,
+html[data-theme="dark"] .approach-step:hover,
+html[data-theme="dark"] .checklist-card:hover{
+  background:#23252b !important;
+  color:var(--text, #ece9e2);
+}
+html[data-theme="dark"] .service-card:hover .service-name,
+html[data-theme="dark"] .service-card:hover .service-tagline,
+html[data-theme="dark"] .framework-card:hover .framework-name,
+html[data-theme="dark"] .framework-card:hover .framework-desc{
+  color:var(--text, #ece9e2) !important;
+}
+
+html[data-theme="dark"] .obj-card,
+html[data-theme="dark"] .cad-card:not(.now),
+html[data-theme="dark"] .bound-card.do,
+html[data-theme="dark"] .bound-card.dont,
+html[data-theme="dark"] .client-card,
+html[data-theme="dark"] .detail-card:not(.dark),
+html[data-theme="dark"] .diagram{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border-color:rgba(255,255,255,.1);
+  color:var(--ink, #ece9e2);
+}
+html[data-theme="dark"] .outside-pill{
+  background:rgba(114,136,214,.12);
+  color:#c9d4f5;
+  border-color:#7288d6;
+}
+html[data-theme="dark"] .inside-pill{color:rgba(236,233,226,.75)}
+html[data-theme="dark"] .framework-pill,
+html[data-theme="dark"] .checklist-count{
+  color:#c9d4f5;
+  background:rgba(114,136,214,.12);
+  border-color:rgba(114,136,214,.28);
+}
+html[data-theme="dark"] .field input,
+html[data-theme="dark"] .field select,
+html[data-theme="dark"] .field textarea{
+  background:var(--bg2, #1c1e24);
+  color:var(--text, #ece9e2);
+  border-color:rgba(255,255,255,.16);
+}
+html[data-theme="dark"] .date-pill,
+html[data-theme="dark"] .time-pill{
+  background:var(--bg2, #1c1e24);
+  color:var(--text, #ece9e2);
+}
+html[data-theme="dark"] .date-pill.is-selected,
+html[data-theme="dark"] .time-pill.is-selected{
+  background:#2e4080;
+  color:#f6f3ec;
+  border-color:#7288d6;
+}
+
+/* Keep navy CTA text cream even when --white is remapped to a dark surface */
+html[data-theme="dark"] .btn-primary{color:#f6f3ec !important}
+html[data-theme="dark"] .closer .tagline{color:#d4c2a2}
+
+/* Overlay copy on the homepage service drawer */
+html[data-theme="dark"] #services-overlay,
+html[data-theme="dark"] .ov-nav,
+html[data-theme="dark"] .ov-sidebar,
+html[data-theme="dark"] .service-hero,
+html[data-theme="dark"] .breadcrumb,
+html[data-theme="dark"] .service-body,
+html[data-theme="dark"] .service-footer{
+  color:var(--text-primary, #ece9e2);
+}
+html[data-theme="dark"] .ov-brand,
+html[data-theme="dark"] .service-hero h1,
+html[data-theme="dark"] .section-block h3,
+html[data-theme="dark"] .section-block h2,
+html[data-theme="dark"] .coverage-item h3,
+html[data-theme="dark"] .step-content h3{
+  color:var(--text-primary, #ece9e2) !important;
+}
+html[data-theme="dark"] .ov-close,
+html[data-theme="dark"] .service-nav-title,
+html[data-theme="dark"] .service-hero-desc,
+html[data-theme="dark"] .section-block p,
+html[data-theme="dark"] .coverage-item p,
+html[data-theme="dark"] .step-content p{
+  color:var(--text-secondary, #c4bfb4) !important;
+}
+
+/* Slightly softer chrome */
+.site-header{
+  backdrop-filter:blur(22px) saturate(160%);
+  -webkit-backdrop-filter:blur(22px) saturate(160%);
+}
+.site-cta, .btn-solid, .btn-navy, .btn-primary, .cta-btn{
+  border-radius:8px;
+}
+
+/* ════════════════════════════════════════════════════════
+   LIVE, INTERACTIVE DIAGRAMS — AI · Cybersecurity · Data
+   Replaces legacy hero SVGs. JS builds the SVG, telemetry,
+   tabs, and node detail panel; CSS handles the motion.
+════════════════════════════════════════════════════════ */
+
+/* The diagram is a real grid item, not an absolutely-positioned
+   overlay. Overlaying it meant it floated on top of the hero copy
+   (up to 207px of overlap on the services hero) and, because it
+   contributed no height, spilled above and below heroes shorter
+   than the card itself. Heroes opt into the split layout with
+   .hero-split; pages with bespoke hero grids place it explicitly. */
+.live-viz{
+  position:relative; z-index:2; pointer-events:auto;
+  width:100%; max-width:420px; justify-self:end; align-self:center;
+  font-family:var(--gh-sans,'DM Sans',sans-serif);
+  opacity:1;
+}
+
+/* Each page's hero owns its own grid (index and growth-advisor have
+   bespoke row structures; services / practice / contact define theirs
+   locally). They all share this one rule: the diagram is a grid item
+   in the right column, never an overlay. */
+@media (max-width:1120px){
+  .live-viz{max-width:360px}
+}
+@media (max-width:960px){
+  .live-viz{display:none}
+}
+
+.lv-card{
+  position:relative; border-radius:18px; padding:12px;
+  background:linear-gradient(160deg, rgba(26,39,68,.68), rgba(18,24,42,.46));
+  border:1px solid rgba(174,188,240,.18);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  box-shadow:0 30px 70px -30px rgba(10,14,28,.62), inset 0 1px 0 rgba(255,255,255,.08);
+  overflow:hidden;
+}
+.lv-card::before{
+  content:''; position:absolute; inset:-30% -12% auto; height:66%;
+  background:radial-gradient(440px 170px at 50% 0%, rgba(114,136,214,.22), transparent 64%);
+  pointer-events:none;
+}
+.lv-card::after{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  border-radius:inherit;
+  box-shadow:inset 0 0 34px rgba(114,136,214,.08);
+}
+
+.lv-head{position:relative; display:flex; align-items:center; gap:8px; margin-bottom:9px; z-index:1}
+.lv-icon{
+  width:27px; height:27px; border-radius:9px; display:grid; place-items:center;
+  background:linear-gradient(135deg, rgba(114,136,214,.32), rgba(114,136,214,.08));
+  border:1px solid rgba(114,136,214,.4);
+  color:#c9d4f5; font-size:10px; font-weight:700; letter-spacing:.06em;
+  box-shadow:0 0 16px rgba(114,136,214,.25);
+}
+.lv-title{font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#eef2ff}
+.lv-sub{font-size:9px; color:rgba(212,218,240,.6); letter-spacing:.05em; margin-top:1px}
+.lv-status{margin-left:auto; display:inline-flex; align-items:center; gap:6px; font-size:9.5px; font-weight:600; color:#9ff0c4; letter-spacing:.05em; text-transform:uppercase}
+.lv-status .lv-dot{width:6px; height:6px; border-radius:50%; background:#61e2a2; box-shadow:0 0 8px #61e2a2; animation:lv-blink 1.8s ease-in-out infinite}
+@keyframes lv-blink{0%,100%{opacity:1; transform:scale(1)}50%{opacity:.45; transform:scale(.8)}}
+
+.lv-tabs{position:relative; display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-bottom:10px; z-index:1}
+.lv-tab{
+  appearance:none; border:1px solid rgba(174,188,240,.18);
+  background:rgba(174,188,240,.06); color:rgba(238,242,255,.72);
+  font-family:inherit; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  padding:7px 6px; border-radius:9px; cursor:pointer; transition:color .2s,border-color .2s,background .2s,box-shadow .2s,transform .2s;
+}
+.lv-tab:hover{color:#fff; border-color:rgba(174,188,240,.45); transform:translateY(-1px)}
+.lv-tab:focus-visible{outline:2px solid rgba(174,188,240,.6); outline-offset:2px}
+.lv-tab.active{
+  background:linear-gradient(135deg, rgba(114,136,214,.3), rgba(114,136,214,.1));
+  border-color:rgba(174,188,240,.6); color:#fff;
+  box-shadow:0 0 18px rgba(114,136,214,.22), inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+.lv-stage{position:relative; width:100%; aspect-ratio:1/1; border-radius:13px; overflow:hidden; z-index:1;
+  background:radial-gradient(circle at 50% 40%, rgba(114,136,214,.14), rgba(10,14,24,.2) 62%);
+  border:1px solid rgba(174,188,240,.12);
+}
+.lv-svg{width:100%; height:100%; display:block; overflow:visible; cursor:default; transition:transform .18s ease-out}
+.lv-svg text{user-select:none; -webkit-user-select:none}
+
+.lv-gridline{stroke:rgba(174,188,240,.07); stroke-width:.6}
+.lv-orbit{fill:none; stroke:rgba(174,188,240,.14); stroke-width:1}
+.lv-orbit.dash{stroke:rgba(174,188,240,.22); stroke-dasharray:3 10; transform-box:fill-box; transform-origin:center; animation:lv-orbit 30s linear infinite}
+.lv-orbit.dash.rev{animation-direction:reverse; animation-duration:42s; stroke-opacity:.55}
+@keyframes lv-orbit{to{transform:rotate(360deg)}}
+
+.lv-link{fill:none; stroke:rgba(174,188,240,.32); stroke-width:1; stroke-dasharray:5 9; animation:lv-stream 5s linear infinite}
+.lv-link.strong{stroke:rgba(174,188,240,.52); stroke-width:1.2; stroke-dasharray:none; animation:none}
+@keyframes lv-stream{to{stroke-dashoffset:-28px}}
+
+.lv-node{transform-box:fill-box; transform-origin:center; cursor:pointer; transition:opacity .2s}
+.lv-node-halo{fill:none; stroke:rgba(174,188,240,.26); stroke-width:1; animation:lv-pulse 4s ease-in-out infinite}
+@keyframes lv-pulse{0%,100%{opacity:.55; transform:scale(1)}50%{opacity:1; transform:scale(1.12)}}
+.lv-node-disc{
+  fill:rgba(18,24,42,.82); stroke:rgba(174,188,240,.7); stroke-width:1.4;
+  filter:drop-shadow(0 0 9px rgba(114,136,214,.35));
+  transition:fill .25s,stroke .25s,filter .25s,transform .25s;
+}
+.lv-node:hover .lv-node-disc,
+.lv-node.is-active .lv-node-disc{
+  fill:rgba(114,136,214,.42); stroke:#eef2ff;
+  filter:drop-shadow(0 0 16px rgba(114,136,214,.85));
+  transform:scale(1.06);
+}
+.lv-node-icon{fill:none; stroke:#eef2ff; stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round}
+.lv-node-label{
+  font-size:9.4px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; fill:#eef2ff; text-anchor:middle;
+  paint-order:stroke; stroke:rgba(10,14,24,.6); stroke-width:3px;
+  transition:fill .2s;
+}
+.lv-node:hover .lv-node-label,.lv-node.is-active .lv-node-label{fill:#fff}
+.lv-node-sub{
+  font-size:7px; letter-spacing:.16em; text-transform:uppercase; fill:rgba(212,218,240,.62); text-anchor:middle;
+  paint-order:stroke; stroke:rgba(10,14,24,.38); stroke-width:2px;
+}
+
+.lv-hub{filter:drop-shadow(0 0 18px rgba(114,136,214,.75))}
+.lv-hub-circle{fill:url(#lvCoreGrad); stroke:#c9d4f5; stroke-width:1.6}
+.lv-hub-label{
+  font-family:var(--gh-serif,'Cormorant Garamond',serif); font-style:italic; font-size:14px; fill:#f4f1ea; text-anchor:middle;
+}
+
+.lv-pack{
+  fill:#aebcf0; opacity:0; transform-box:fill-box; transform-origin:center;
+  filter:drop-shadow(0 0 6px #aebcf0);
+  animation:lv-pack 5.2s cubic-bezier(.45,.05,.35,1) infinite;
+}
+.lv-pack:nth-of-type(2n){fill:#c9b190}
+.lv-pack:nth-of-type(3n){fill:#8ea0e0}
+@keyframes lv-pack{
+  0%{opacity:0; transform:translate(0,0) scale(.4)}
+  14%{opacity:1; transform:scale(1)}
+  82%{opacity:1}
+  100%{opacity:0; transform:translate(var(--dx,0),var(--dy,0)) scale(.4)}
+}
+.lv-wave{
+  fill:none; stroke:url(#lvWaveGrad); stroke-width:1.6; stroke-dasharray:3 30; opacity:.9;
+  transform-box:fill-box; transform-origin:center; animation:lv-fullspin 7s linear infinite;
+}
+@keyframes lv-fullspin{to{transform:rotate(360deg)}}
+
+.lv-readout{position:relative; display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-top:10px; z-index:1}
+.lv-metric{background:rgba(174,188,240,.07); border:1px solid rgba(174,188,240,.12); border-radius:10px; padding:7px 8px}
+.lv-metric-label{font-size:8px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:rgba(212,218,240,.62)}
+.lv-metric-val{font-size:14px; font-weight:800; color:#eef2ff; font-variant-numeric:tabular-nums; line-height:1.4; letter-spacing:.02em}
+.lv-metric-val small{font-size:8.5px; font-weight:600; color:rgba(212,218,240,.62); margin-left:2px; letter-spacing:.02em}
+.lv-metric.flash .lv-metric-val{animation:lv-flash .8s ease}
+@keyframes lv-flash{0%{color:#fff; text-shadow:0 0 10px rgba(174,188,240,.9)}100%{color:#eef2ff; text-shadow:none}}
+
+.lv-legend{position:relative; display:flex; flex-wrap:wrap; gap:5px 10px; margin-top:10px; z-index:1}
+.lv-legend span{display:inline-flex; align-items:center; gap:5px; font-size:8.5px; font-weight:600; letter-spacing:.04em; color:rgba(212,218,240,.72)}
+.lv-legend i{width:8px; height:8px; border-radius:50%; display:inline-block}
+
+.lv-detail{
+  position:absolute; left:8px; right:8px; bottom:8px; z-index:4; padding:9px 11px; border-radius:10px;
+  background:rgba(10,14,24,.78); border:1px solid rgba(174,188,240,.22); backdrop-filter:blur(6px);
+  opacity:0; transform:translateY(8px); transition:opacity .22s,transform .22s; pointer-events:none;
+}
+.lv-detail.show{opacity:1; transform:translateY(0); pointer-events:auto}
+.lv-detail-title{font-size:10px; font-weight:800; letter-spacing:.08em; color:#eef2ff; text-transform:uppercase; padding-right:16px}
+.lv-detail-body{font-size:9.5px; line-height:1.5; color:rgba(212,218,240,.82); margin-top:3px}
+.lv-detail-close{position:absolute; top:5px; right:8px; background:none; border:none; color:rgba(212,218,240,.65); cursor:pointer; font-size:13px; line-height:1}
+.lv-detail-close:hover{color:#fff}
+.lv-hint{position:relative; margin-top:8px; font-size:8.5px; letter-spacing:.06em; color:rgba(212,218,240,.5); z-index:1; display:flex; gap:6px; align-items:center}
+.lv-hint b{color:rgba(212,218,240,.8); font-weight:700}
+
+@media (prefers-reduced-motion: reduce){
+  .live-viz .lv-orbit,.live-viz .lv-link,.live-viz .lv-wave,
+  .live-viz .lv-pack,.live-viz .lv-node-halo,.live-viz .lv-status .lv-dot{animation:none !important}
+  .lv-svg{transition:none !important}
+  .lv-pack{opacity:.6 !important; transform:none !important}
+}
+
+/* ════════════════════════════════════════════════════════
+   DOCUMENT BOX
+   There used to be a desktop `body{zoom:.9; width:111.111111%}`
+   block here to fake a 90%-browser density. It is removed:
+
+   • `zoom` is a legacy property that Firefox only shipped in v126.
+     Any engine ignoring it still applied `width:111.111111%`, which
+     made the document 11.1vw wider than the viewport and pushed
+     content off the right edge.
+   • Where `zoom` was honoured it scaled viewport units too, so
+     `min-height:100vh` heroes rendered at 90% of the screen, and
+     `position:fixed` chrome (progress bar, custom cursor, service
+     overlay) had its pixel coordinates multiplied by 0.9 — the
+     custom cursor visibly trailed the real pointer.
+
+   Density is now expressed with real layout tokens instead.
+════════════════════════════════════════════════════════ */
+html{
+  /* Guard the document against any single oversized decorative
+     element ever producing a horizontal scrollbar again. */
+  overflow-x:hidden;
+}
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+}
+
+/* ════════════════════════════════════════════════════════
+   DARK MODE — FINAL CROSS-PAGE CONTRAST PASS
+   Page-specific stylesheets are intentionally kept local to each
+   document. These last shared rules cover the few light hover
+   states and native controls that would otherwise be able to
+   override the dark theme on individual pages.
+════════════════════════════════════════════════════════ */
+html[data-theme="dark"] body{
+  background:#15161b;
+  color:#ece9e2;
+}
+
+/* Light hover declarations in the page-level styles must not flash
+   white when a dark-mode user moves across a card. */
+html[data-theme="dark"] .service-card:not(.expanded):hover,
+html[data-theme="dark"] .industry-card:hover,
+html[data-theme="dark"] .framework-card:hover,
+html[data-theme="dark"] .approach-step:hover{
+  background:#23252b !important;
+  color:#ece9e2 !important;
+  border-color:rgba(255,255,255,.16) !important;
+}
+html[data-theme="dark"] .service-card:not(.expanded):hover .service-name,
+html[data-theme="dark"] .service-card:not(.expanded):hover .service-tagline,
+html[data-theme="dark"] .industry-card:hover .industry-name,
+html[data-theme="dark"] .industry-card:hover .industry-desc,
+html[data-theme="dark"] .framework-card:hover .framework-name,
+html[data-theme="dark"] .framework-card:hover .framework-desc{
+  color:#ece9e2 !important;
+}
+html[data-theme="dark"] .service-card.expanded,
+html[data-theme="dark"] .sub-services-panel{
+  background:#1a2744 !important;
+  color:#f6f3ec;
+}
+
+/* Cards and panels which use a light token in the homepage drawer or
+   the advisory page keep a readable dark surface in both themes. */
+html[data-theme="dark"] .coverage-item,
+html[data-theme="dark"] .bound-card.dont,
+html[data-theme="dark"] .framework-word:not(.accent),
+html[data-theme="dark"] .btn-outline{
+  background:#1c1e24 !important;
+  border-color:rgba(255,255,255,.14) !important;
+  color:#ece9e2 !important;
+}
+html[data-theme="dark"] .framework-word.accent{
+  background:#1a2744 !important;
+  border-color:#7288d6 !important;
+  color:#f6f3ec !important;
+}
+html[data-theme="dark"] .bound-card.dont .note,
+html[data-theme="dark"] .bound-card.dont .footnote{
+  color:#aaa59b !important;
+}
+html[data-theme="dark"] .detail-card:not(.dark) li,
+html[data-theme="dark"] .checklist-items li,
+html[data-theme="dark"] .industry-sub-list li{
+  border-color:rgba(255,255,255,.1) !important;
+}
+
+/* Readable native form controls and placeholders. */
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder{
+  color:#8f8a80 !important;
+  opacity:1;
+}
+html[data-theme="dark"] select,
+html[data-theme="dark"] option{
+  color-scheme:dark;
+}
+html[data-theme="dark"] .segmented label{
+  background:#1c1e24;
+  border-color:rgba(255,255,255,.16);
+  color:#bdb8ae;
+}
+html[data-theme="dark"] .segmented input:checked + label{
+  background:#2e4080;
+  border-color:#7288d6;
+  color:#f6f3ec;
+}
+html[data-theme="dark"] .date-pill,
+html[data-theme="dark"] .time-pill,
+html[data-theme="dark"] .btn-ics{
+  background:#1c1e24;
+  border-color:rgba(255,255,255,.16);
+  color:#ece9e2;
+}
+html[data-theme="dark"] .date-pill.is-selected,
+html[data-theme="dark"] .time-pill.is-selected{
+  background:#2e4080;
+  border-color:#7288d6;
+  color:#f6f3ec;
+}
+
+/* Keep subtle supporting copy from dropping below comfortable contrast. */
+html[data-theme="dark"] .stat-label,
+html[data-theme="dark"] .service-number,
+html[data-theme="dark"] .approach-num,
+html[data-theme="dark"] .ladder-desc,
+html[data-theme="dark"] .sched-note{
+  color:#918c82;
+}
+html[data-theme="dark"] .site-footer{
+  background:#121827;
+}
+
+html[data-theme="dark"] .pillar-chip.active{
+  background:#2e4080 !important;
+  border-color:#7288d6 !important;
+  color:#f6f3ec !important;
+  box-shadow:0 4px 18px -6px rgba(114,136,214,.45);
+}

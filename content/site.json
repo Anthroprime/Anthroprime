@@ -1,0 +1,2005 @@
+{
+  "pillars": [
+    {
+      "id": "cyber",
+      "title": "Full-spectrum cybersecurity across every layer.",
+      "description": "From audit and adversarial simulation to managed detection and forensics — covering the complete security lifecycle for modern enterprises and critical infrastructure.",
+      "services": [
+        {
+          "id": "cyber-1",
+          "name": "Information Security Auditing",
+          "description": "CERT-IN aligned audits across network, application, cloud, and organisational controls.",
+          "groups": [
+            {
+              "title": "Compliance & Regulatory",
+              "items": [
+                "CERT-IN compliance assessment",
+                "ISO 27001 readiness & internal audits",
+                "DPDP Act compliance assessment",
+                "RBI, SEBI, IRDAI regulatory audits",
+                "GDPR and global privacy alignment"
+              ]
+            },
+            {
+              "title": "Technical Security Audits",
+              "items": [
+                "Network security audit",
+                "Application security audit",
+                "Cloud security audit (AWS, Azure, GCP)",
+                "Wireless network security assessment",
+                "Container & endpoint security assessment",
+                "Active Directory & IAM audit",
+                "Firewall security review",
+                "Configuration & hardening assessment"
+              ]
+            },
+            {
+              "title": "Governance & Risk",
+              "items": [
+                "Attack surface discovery",
+                "Breach & attack simulations",
+                "Patch management review",
+                "Security policy & governance review",
+                "Vendor risk management assessment",
+                "Incident response readiness assessment",
+                "Source code review"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-2",
+          "name": "Penetration Testing",
+          "description": "Adversarial simulation across web, mobile, API, network, cloud, and OT/SCADA.",
+          "groups": [
+            {
+              "title": "Application & API",
+              "items": [
+                "Web application pentest (OWASP Top 10)",
+                "Mobile application pentest (Android/iOS)",
+                "API & web services security testing",
+                "Database security assessment",
+                "Grey box & black box testing"
+              ]
+            },
+            {
+              "title": "Network & Infrastructure",
+              "items": [
+                "Internal network penetration testing",
+                "External network penetration testing",
+                "Cloud penetration testing",
+                "Wireless network security testing",
+                "OT / SCADA security testing"
+              ]
+            },
+            {
+              "title": "Reporting & Closure",
+              "items": [
+                "Evidence-based reporting with PoC",
+                "Business impact assessment",
+                "Prioritised remediation guidance",
+                "Retest & closure attestation letter"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-3",
+          "name": "Red Team & Simulation",
+          "description": "Full-scope red team operations, phishing campaigns, and ransomware resiliency testing.",
+          "groups": [
+            {
+              "title": "Simulation & Testing",
+              "items": [
+                "Red team attack simulation",
+                "Phishing campaign & simulation",
+                "Social engineering exercises",
+                "Physical security testing",
+                "Breach & attack simulation (BAS)",
+                "Ransomware resiliency testing"
+              ]
+            },
+            {
+              "title": "Drill & Exercises",
+              "items": [
+                "CyberDrill exercises",
+                "Tabletop exercises (TTX)",
+                "Red team vs. Blue team exercises",
+                "Executive crisis simulation"
+              ]
+            },
+            {
+              "title": "Outcomes",
+              "items": [
+                "Real attacker pathways documented",
+                "Board-ready reporting",
+                "Closure attestation post-remediation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-4",
+          "name": "Managed Detection & Response",
+          "description": "24/7 SOC-as-a-Service, SIEM, UEBA, threat hunting, and SLA-tracked incident response.",
+          "groups": [
+            {
+              "title": "Detection & Monitoring",
+              "items": [
+                "24/7 SOC-as-a-Service",
+                "Managed Endpoint Detection & Response",
+                "SIEM & log management",
+                "UEBA — User & Entity Behaviour Analytics",
+                "Network Detection & Response (NDR)"
+              ]
+            },
+            {
+              "title": "Managed Operations",
+              "items": [
+                "Managed cloud security",
+                "Managed AppSec & network security",
+                "SOAR — Security Orchestration & Automation",
+                "Security infrastructure management"
+              ]
+            },
+            {
+              "title": "Proactive Defence",
+              "items": [
+                "Proactive threat hunting",
+                "Vulnerability management",
+                "Curated threat intelligence",
+                "SLA-tracked incident response",
+                "Executive dashboards & KPIs"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-5",
+          "name": "Incident Response & Forensics",
+          "description": "Rapid breach containment, crisis management, and litigation-ready forensic investigation.",
+          "groups": [
+            {
+              "title": "Incident Response",
+              "items": [
+                "Incident & breach response",
+                "Cyber crisis management",
+                "Compromise assessment",
+                "Malware analysis & eradication",
+                "IR retainer services",
+                "IR readiness assessment & playbooks"
+              ]
+            },
+            {
+              "title": "Digital Forensics",
+              "items": [
+                "Device & mobile forensics (Android/iOS)",
+                "Computer forensics & data recovery",
+                "Log analysis & RAM dump analysis",
+                "Malware reverse engineering",
+                "OSINT & dark web intelligence"
+              ]
+            },
+            {
+              "title": "Legal & Lab",
+              "items": [
+                "Expert witness & litigation support",
+                "Chain of custody management",
+                "Forensic lab design & setup",
+                "Forensic team training & certification"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-6",
+          "name": "DevSecOps & Cloud Security",
+          "description": "Security embedded into CI/CD pipelines, Zero Trust architecture, and cloud-native environments.",
+          "groups": [
+            {
+              "title": "DevSecOps",
+              "items": [
+                "DevSecOps programme design & implementation",
+                "CI/CD pipeline security integration",
+                "SAST / DAST / SCA toolchain setup",
+                "Secure SDLC framework",
+                "Developer security training",
+                "Container & Kubernetes security"
+              ]
+            },
+            {
+              "title": "Cloud & Architecture",
+              "items": [
+                "Zero Trust architecture design",
+                "Cloud migration security",
+                "Cloud-native workload security",
+                "DDoS assessment"
+              ]
+            },
+            {
+              "title": "Transformation",
+              "items": [
+                "Digital transformation advisory",
+                "Security framework alignment (NIST, ISO, CIS)",
+                "Technology roadmap advisory",
+                "Vendor / OEM technology selection"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-7",
+          "name": "Cyber Risk Quantification",
+          "description": "FAIR-based financial modelling that converts technical risk into loss exposure estimates.",
+          "groups": [
+            {
+              "title": "Risk Modelling",
+              "items": [
+                "FAIR-based financial risk modelling",
+                "Ransomware & data breach impact modelling",
+                "Insider threat scenario analysis",
+                "Control effectiveness analysis",
+                "Monte Carlo scenario simulation"
+              ]
+            },
+            {
+              "title": "Reporting",
+              "items": [
+                "Executive risk dashboards & heatmaps",
+                "Board-ready risk reporting",
+                "Residual risk analysis"
+              ]
+            },
+            {
+              "title": "Investment Advisory",
+              "items": [
+                "Cyber insurance readiness assessment",
+                "Coverage gap analysis",
+                "Security investment ROI (ROSI) analysis",
+                "Budget prioritisation support"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-8",
+          "name": "GRC & Compliance",
+          "description": "End-to-end governance, risk, and compliance across international and Indian regulatory frameworks.",
+          "groups": [
+            {
+              "title": "International Frameworks",
+              "items": [
+                "ISO 27001 compliance audit",
+                "ISO 27701 compliance audit",
+                "SOC 2 compliance audit",
+                "PCI DSS compliance audit",
+                "GDPR compliance audit",
+                "HIPAA / SAMA advisory"
+              ]
+            },
+            {
+              "title": "Indian Regulatory — RBI",
+              "items": [
+                "RBI Information Security audit",
+                "RBI NBFC / Account Aggregator / PPI / PSS audit",
+                "RBI P2P lending & Co-operative Bank IS audit",
+                "RBI Payment Aggregators & Gateway audit"
+              ]
+            },
+            {
+              "title": "Indian Regulatory — SEBI / Others",
+              "items": [
+                "SEBI system & cyber security framework audit",
+                "IRDAI ISNP audit",
+                "NPCI / UPI audit",
+                "UIDAI AUA/KUA (Aadhaar) audit",
+                "DPDP Act compliance assessment"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-9",
+          "name": "Government & PSU Advisory",
+          "description": "Strategic cybersecurity guidance for central bodies, PSUs, and critical national infrastructure.",
+          "groups": [
+            {
+              "title": "Policy & Compliance",
+              "items": [
+                "Cybersecurity policy drafting",
+                "CERT-IN / MeitY regulatory alignment",
+                "Critical infrastructure security assessment",
+                "Sectoral compliance support"
+              ]
+            },
+            {
+              "title": "Program & SOC Setup",
+              "items": [
+                "Government SOC setup & advisory",
+                "Cybersecurity strategy & roadmap for PSUs",
+                "Security architecture for large-scale govt. systems"
+              ]
+            },
+            {
+              "title": "Risk & Incident",
+              "items": [
+                "Third-party / vendor risk assessment",
+                "Cyber crisis management",
+                "Incident response planning",
+                "Threat intelligence landscape alignment"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-specialist-1",
+          "name": "OT / ICS & IoT Security",
+          "description": "Securing operational technology, industrial control systems, and connected device environments — with operational safety as a primary constraint.",
+          "groups": [
+            {
+              "title": "Specialist scope",
+              "items": [
+                "OT / ICS security assessment",
+                "SCADA security testing",
+                "Industrial network segmentation review",
+                "OT vulnerability assessment & risk modelling",
+                "OT security architecture design (IEC 62443)",
+                "Cloud-native workload security for OT"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-specialist-2",
+          "name": "Telecom Security",
+          "description": "End-to-end security across 5G core, signaling, fraud, and telecom network infrastructure — for operators navigating next-generation network complexity.",
+          "groups": [
+            {
+              "title": "Specialist scope",
+              "items": [
+                "5G core & RAN security assessment",
+                "SS7 / Diameter signaling security",
+                "Telecom fraud risk assessment",
+                "API & roaming security testing",
+                "Network Exposure Function (NEF) testing",
+                "Telecom SOC design & advisory"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-specialist-3",
+          "name": "Automotive Security",
+          "description": "Securing the full vehicle lifecycle — from embedded systems and OTA to Automotive SOC and ISO 21434 compliance — for OEMs and Tier 1 suppliers.",
+          "groups": [
+            {
+              "title": "Specialist scope",
+              "items": [
+                "Automotive TARA (Threat Analysis & Risk)",
+                "ECU / CAN bus VAPT",
+                "ISO 21434 & UNECE R155/R156 compliance",
+                "OTA security assessment",
+                "Secure SDLC for automotive (AUTOSAR)",
+                "Automotive SOC design & implementation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-people-5",
+          "name": "Security Team Building",
+          "description": "End-to-end talent acquisition, university partnerships, and team structuring for organisations scaling their internal security function — from first hire to mature SOC.",
+          "groups": [
+            {
+              "title": "The Challenge We Solve",
+              "items": [
+                "Hiring in cybersecurity is uniquely difficult. The candidate pool is shallow, credentials are unreliable signals, and the cost of a poor hire in a security function is outsized. Organisations building or scaling security teams need a partner who understands both the domain and the talent landscape."
+              ]
+            },
+            {
+              "title": "What We Provide",
+              "items": [
+                "a Team Structure Design Role definition, reporting lines, and team topology design aligned to your threat environment and maturity stage.",
+                "b Talent Acquisition End-to-end hiring support — sourcing, technical assessment, and onboarding — with domain-specific evaluation criteria.",
+                "c University Partnerships Structured engagement with engineering and cybersecurity programmes to build early talent pipelines.",
+                "d Leadership Hiring CISO, Head of Security, and senior SOC lead search — with executive assessment and reference validation.",
+                "e Capability Assessment Assessment of existing team capability gaps and skill development roadmaps for current security personnel.",
+                "f SOC Buildout Full Security Operations Centre design — people, process, and technology — from green field to operational."
+              ]
+            },
+            {
+              "title": "Our Approach",
+              "items": [
+                "01 Current State & Ambition We map where you are — headcount, capability, tooling — against where your threat environment and business ambition require you to be.",
+                "02 Target Operating Model A concrete team design: roles, responsibilities, and the sequencing of hires to build capability without redundancy.",
+                "03 Talent Sourcing & Assessment Domain-literate sourcing and structured technical evaluation — we assess candidates as practitioners, not recruiters.",
+                "04 Onboarding & Retention Structured onboarding programmes and retention frameworks designed for the particular demands of security talent."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cyber-people-6",
+          "name": "Training & Awareness",
+          "description": "Customised cybersecurity training for employees, leadership, and technical teams — plus university engagement for emerging talent pipelines across the sector.",
+          "groups": [
+            {
+              "title": "Why Human Risk Matters",
+              "items": [
+                "The majority of successful breaches involve a human element — phishing, social engineering, misconfiguration, or process failure. Technical controls are necessary but not sufficient. A security culture, built through consistent and contextually relevant training, is what closes the gap."
+              ]
+            },
+            {
+              "title": "Training Programmes",
+              "items": [
+                "a Employee Awareness Phishing simulation, social engineering awareness, and safe digital behaviour — tailored to your organisation's threat profile.",
+                "b Leadership & Board Cyber risk literacy for senior leaders — translating technical threats into governance and strategic decision-making.",
+                "c Technical Deep-Dives Role-specific training for developers, system administrators, and SOC analysts — hands-on and scenario-driven.",
+                "d Incident Response Drills Tabletop exercises and live simulations for security and leadership teams — testing process under realistic pressure.",
+                "e University Programmes Structured engagement with engineering institutions — guest lectures, workshops, and curriculum advisory.",
+                "f Compliance Training Role-specific training aligned to CERT-IN, ISO 27001, RBI, and DPDP Act obligations for audit readiness."
+              ]
+            },
+            {
+              "title": "Our Delivery Model",
+              "items": [
+                "01 Needs Assessment We assess your current training baseline, threat profile, and compliance obligations to design a programme that addresses real gaps, not generic risks.",
+                "02 Programme Design Content is built around your sector, systems, and team profiles — not repurposed generic modules. Each programme is custom-built.",
+                "03 Delivery & Simulation Instructor-led sessions, phishing simulations, and tabletop exercises delivered in-person or virtually — with measurable participation metrics.",
+                "04 Measurement & Iteration Post-training assessment, simulation results tracking, and annual programme reviews to ensure sustained effectiveness."
+              ]
+            },
+            {
+              "title": "Who This Is For",
+              "items": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI that secures, automates, and informs.",
+      "description": "From securing AI systems to deploying autonomous agents and intelligence platforms — real enterprise outcomes, not pilots.",
+      "services": [
+        {
+          "id": "ai-1",
+          "name": "AI Security & Red-Teaming",
+          "description": "Adversarial testing, prompt injection assessment, and governance for AI-powered systems.",
+          "groups": [
+            {
+              "title": "Assessment",
+              "items": [
+                "LLM & generative AI risk assessment",
+                "Adversarial prompt injection testing",
+                "AI model security evaluation",
+                "AI supply chain risk assessment",
+                "Bias, hallucination & output risk review"
+              ]
+            },
+            {
+              "title": "Governance",
+              "items": [
+                "AI risk policy & regulatory alignment",
+                "Responsible AI framework design",
+                "AI vendor & model evaluation"
+              ]
+            },
+            {
+              "title": "Why it matters",
+              "items": [
+                "AI systems introduce new attack surfaces",
+                "Prompt injection is the new SQL injection",
+                "Boards need defensible AI governance"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ai-2",
+          "name": "Agentic AI for Business",
+          "description": "Autonomous AI agents driving acquisition, conversion, retention, and support at scale.",
+          "groups": [
+            {
+              "title": "Agent Capabilities",
+              "items": [
+                "Customer acquisition & conversion agents",
+                "AI-driven retention & support automation",
+                "Drop-off detection & recovery workflows",
+                "Autonomous sales & upsell agents"
+              ]
+            },
+            {
+              "title": "Channels & Deployment",
+              "items": [
+                "WhatsApp, SMS & email automation",
+                "Voice agent deployment",
+                "Web & app channel integration",
+                "Multilingual support"
+              ]
+            },
+            {
+              "title": "Control & Observability",
+              "items": [
+                "AI agent observability & traceability",
+                "Guardrails & prompt security",
+                "Performance tracking & testing automation",
+                "Human escalation workflows"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ai-3",
+          "name": "Data & Business Intelligence",
+          "description": "Natural language querying, predictive analytics, and AI-powered decision intelligence.",
+          "groups": [
+            {
+              "title": "Intelligence Platform",
+              "items": [
+                "Natural language querying of operational data",
+                "Predictive analytics & anomaly detection",
+                "Live data aggregation across platforms",
+                "AI-powered decision intelligence"
+              ]
+            },
+            {
+              "title": "Reporting & Automation",
+              "items": [
+                "Automated reporting & executive dashboards",
+                "Instant alerts & event-based triggers",
+                "Smart charts & visual reports"
+              ]
+            },
+            {
+              "title": "Integration",
+              "items": [
+                "CRM, ERP & core banking integration",
+                "Cloud & on-premise deployment",
+                "Role-based access & data governance"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data infrastructure that becomes a decision advantage.",
+      "description": "From fragmented systems to a single source of truth — architecture, governance, and analytics built to scale with the business.",
+      "services": [
+        {
+          "id": "data-1",
+          "name": "Data Architecture & Engineering",
+          "description": "Modern data platforms, pipelines, and warehousing built for reliability and scale.",
+          "groups": [
+            {
+              "title": "Platform & Pipelines",
+              "items": [
+                "ETL / ELT pipeline design",
+                "Data warehouse & lakehouse architecture",
+                "Real-time streaming pipelines",
+                "Legacy data migration"
+              ]
+            },
+            {
+              "title": "Modelling & Storage",
+              "items": [
+                "Dimensional & data vault modelling",
+                "Master data management",
+                "Data quality & lineage tooling"
+              ]
+            },
+            {
+              "title": "Reliability",
+              "items": [
+                "Data observability & monitoring",
+                "Backup & disaster recovery design",
+                "Cost & performance optimisation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "data-2",
+          "name": "Data Governance & Compliance",
+          "description": "Policy, access control, and regulatory alignment for data you can trust and defend.",
+          "groups": [
+            {
+              "title": "Governance Framework",
+              "items": [
+                "Data governance policy design",
+                "Data classification & cataloguing",
+                "Role-based access & stewardship models"
+              ]
+            },
+            {
+              "title": "Regulatory",
+              "items": [
+                "DPDP Act & GDPR data mapping",
+                "Data retention & residency review",
+                "Third-party data sharing agreement review"
+              ]
+            },
+            {
+              "title": "Trust",
+              "items": [
+                "Data quality scorecards",
+                "Privacy impact assessments",
+                "Consent & preference management"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "data-3",
+          "name": "Analytics & Business Intelligence",
+          "description": "Dashboards, models, and self-serve analytics that turn data into decisions.",
+          "groups": [
+            {
+              "title": "Reporting",
+              "items": [
+                "Executive dashboards & scorecards",
+                "Self-serve BI enablement",
+                "Automated reporting pipelines"
+              ]
+            },
+            {
+              "title": "Modelling",
+              "items": [
+                "Statistical & predictive modelling",
+                "Cohort, funnel & retention analysis",
+                "Forecasting & scenario planning"
+              ]
+            },
+            {
+              "title": "Enablement",
+              "items": [
+                "Analytics tooling rollout (Looker, Power BI, Tableau)",
+                "Data literacy training",
+                "KPI framework design"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud built around how your teams actually work.",
+      "description": "Strategy, migration, and architecture across AWS, Azure, and GCP — designed for performance, cost, and resilience, not just uptime.",
+      "services": [
+        {
+          "id": "cloud-1",
+          "name": "Cloud Strategy & Architecture",
+          "description": "Landing zones, reference architectures, and multi-cloud strategy aligned to business goals.",
+          "groups": [
+            {
+              "title": "Strategy",
+              "items": [
+                "Cloud readiness assessment",
+                "Multi-cloud & hybrid strategy",
+                "Total cost of ownership modelling"
+              ]
+            },
+            {
+              "title": "Architecture",
+              "items": [
+                "Landing zone design",
+                "Well-architected framework reviews",
+                "Disaster recovery & business continuity architecture"
+              ]
+            },
+            {
+              "title": "Governance",
+              "items": [
+                "Cloud governance & tagging standards",
+                "Cost allocation & chargeback models",
+                "Cloud policy & guardrail design"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cloud-2",
+          "name": "Migration & Modernisation",
+          "description": "Lift-and-shift, replatforming, and application modernisation with minimal disruption.",
+          "groups": [
+            {
+              "title": "Migration",
+              "items": [
+                "Workload discovery & dependency mapping",
+                "Lift-and-shift & replatforming",
+                "Database migration & modernisation"
+              ]
+            },
+            {
+              "title": "Modernisation",
+              "items": [
+                "Containerisation & Kubernetes adoption",
+                "Serverless & microservices migration",
+                "Legacy application refactoring"
+              ]
+            },
+            {
+              "title": "Cutover",
+              "items": [
+                "Migration runbooks & rollback planning",
+                "Cutover testing & validation",
+                "Post-migration performance tuning"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cloud-3",
+          "name": "Cloud Operations & FinOps",
+          "description": "Ongoing optimisation for cost, performance, and reliability at scale.",
+          "groups": [
+            {
+              "title": "FinOps",
+              "items": [
+                "Cost visibility & FinOps practice setup",
+                "Reserved instance & savings plan strategy",
+                "Idle resource identification"
+              ]
+            },
+            {
+              "title": "Operations",
+              "items": [
+                "Infrastructure as code (Terraform, CDK)",
+                "CI/CD pipeline design",
+                "Site reliability engineering support"
+              ]
+            },
+            {
+              "title": "Resilience",
+              "items": [
+                "Auto-scaling & performance tuning",
+                "Multi-region resilience design",
+                "Cloud security posture management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infra",
+      "title": "Verified GPU capacity, from workload to deployment.",
+      "description": "From workload specification to verified sourcing and post-deployment governance — a controlled process for enterprise GPU capacity, not a supplier list.",
+      "services": [
+        {
+          "id": "infra-1",
+          "name": "Capacity Readiness Diagnostic",
+          "description": "Translate a workload into a comparable spec, TCO range and sourcing plan — in days, not weeks.",
+          "groups": [
+            {
+              "title": "Workload Analysis",
+              "items": [
+                "Workload specification & sizing",
+                "GPU / accelerator requirement modelling",
+                "Comparable spec generation across providers"
+              ]
+            },
+            {
+              "title": "Cost & Planning",
+              "items": [
+                "TCO range modelling",
+                "Budget & timeline planning",
+                "Sourcing plan development"
+              ]
+            },
+            {
+              "title": "Output",
+              "items": [
+                "Comparable spec sheet",
+                "TCO range estimate",
+                "Sourcing roadmap, delivered in days"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "infra-2",
+          "name": "GPU Sourcing",
+          "description": "A controlled RFQ across a vetted provider panel, negotiated to close on your behalf.",
+          "groups": [
+            {
+              "title": "Sourcing Process",
+              "items": [
+                "Vetted provider panel curation",
+                "Controlled RFQ management",
+                "Competitive, on-your-behalf negotiation"
+              ]
+            },
+            {
+              "title": "Provider Coverage",
+              "items": [
+                "Hyperscalers & neoclouds",
+                "GPU-specialist & colocation providers",
+                "Bare-metal & managed capacity options"
+              ]
+            },
+            {
+              "title": "Outcome",
+              "items": [
+                "Negotiated terms, closed on your behalf",
+                "Transparent, side-by-side pricing comparison"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "infra-3",
+          "name": "Technical & Capacity Assurance",
+          "description": "Independent verification of ownership, topology and live performance before you sign.",
+          "groups": [
+            {
+              "title": "Verification",
+              "items": [
+                "Ownership & entitlement verification",
+                "Network & interconnect topology validation",
+                "Live performance benchmarking"
+              ]
+            },
+            {
+              "title": "Risk Mitigation",
+              "items": [
+                "SLA & contract review",
+                "Provider financial & operational due diligence"
+              ]
+            },
+            {
+              "title": "Assurance",
+              "items": [
+                "Independent technical validation report",
+                "Pre-signature sign-off"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "infra-4",
+          "name": "Managed Capacity Governance",
+          "description": "Ongoing SLA, utilization and renewal oversight after deployment.",
+          "groups": [
+            {
+              "title": "Ongoing Oversight",
+              "items": [
+                "SLA monitoring & enforcement",
+                "Utilization tracking & optimisation"
+              ]
+            },
+            {
+              "title": "Lifecycle Management",
+              "items": [
+                "Renewal negotiation support",
+                "Capacity scaling advisory"
+              ]
+            },
+            {
+              "title": "Reporting",
+              "items": [
+                "Governance dashboards",
+                "Quarterly capacity reviews"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "securityDetails": [
+    {
+      "name": "Information Security Auditing",
+      "description": "Comprehensive IS audits aligned to CERT-IN frameworks, covering network infrastructure, application security, and organisational controls — providing the assurance your stakeholders require.",
+      "sections": [
+        {
+          "title": "What We Audit",
+          "paragraphs": [
+            "Our IS audits go beyond checkbox compliance. We assess your security posture with the depth that regulatory bodies and enterprise boards expect, producing findings that are actionable, not merely documented."
+          ],
+          "items": [
+            "a Network Infrastructure Perimeter defences, segmentation, firewall rulesets, and internal traffic flows.",
+            "b Application Security Web, mobile, and API-layer security review against OWASP and custom threat models.",
+            "c Organisational Controls Policies, access governance, vendor risk, and incident response maturity.",
+            "d Cloud & Hybrid Environments Configuration review for AWS, Azure, GCP, and private cloud deployments.",
+            "e Compliance Alignment Gap assessment against CERT-IN, ISO 27001, RBI guidelines, and sectoral mandates.",
+            "f Third-Party & Supply Chain Vendor security posture and supply chain exposure review."
+          ]
+        },
+        {
+          "title": "Our Methodology",
+          "paragraphs": [],
+          "items": [
+            "01 Scoping & Asset Discovery We define audit boundaries in collaboration with your team, cataloguing systems, data flows, and critical assets to ensure nothing material is out of scope.",
+            "02 Evidence Collection & Review Configuration review, documentation analysis, and stakeholder interviews form the evidential base — supplemented by technical testing where required.",
+            "03 Risk-Rated Findings Every finding is rated by severity and business impact, with remediation guidance prioritised by risk exposure rather than ease of fix.",
+            "04 Audit Report & Walkthrough A detailed report for your technical team and an executive summary for leadership — both delivered with a debrief session."
+          ]
+        },
+        {
+          "title": "Who This Is For",
+          "paragraphs": [
+            "Organisations required to demonstrate IS compliance — or those seeking independent assurance before major transactions, audits, or regulatory interactions."
+          ],
+          "items": []
+        }
+      ],
+      "text": "Services / Information Security Auditing Service 01 Information Security Auditing Comprehensive IS audits aligned to CERT-IN frameworks, covering network infrastructure, application security, and organisational controls — providing the assurance your stakeholders require. Request an Audit ↗ What We Audit Our IS audits go beyond checkbox compliance. We assess your security posture with the depth that regulatory bodies and enterprise boards expect, producing findings that are actionable, not merely documented. a Network Infrastructure Perimeter defences, segmentation, firewall rulesets, and internal traffic flows. b Application Security Web, mobile, and API-layer security review against OWASP and custom threat models. c Organisational Controls Policies, access governance, vendor risk, and incident response maturity. d Cloud & Hybrid Environments Configuration review for AWS, Azure, GCP, and private cloud deployments. e Compliance Alignment Gap assessment against CERT-IN, ISO 27001, RBI guidelines, and sectoral mandates. f Third-Party & Supply Chain Vendor security posture and supply chain exposure review. Our Methodology 01 Scoping & Asset Discovery We define audit boundaries in collaboration with your team, cataloguing systems, data flows, and critical assets to ensure nothing material is out of scope. 02 Evidence Collection & Review Configuration review, documentation analysis, and stakeholder interviews form the evidential base — supplemented by technical testing where required. 03 Risk-Rated Findings Every finding is rated by severity and business impact, with remediation guidance prioritised by risk exposure rather than ease of fix. 04 Audit Report & Walkthrough A detailed report for your technical team and an executive summary for leadership — both delivered with a debrief session. Who This Is For Organisations required to demonstrate IS compliance — or those seeking independent assurance before major transactions, audits, or regulatory interactions. Banks & NBFCs Insurance Companies Listed Enterprises Central PSUs Critical Infrastructure Healthcare Providers \"Compliance is the floor, not the ceiling — we help you understand the distance between the two.\" Speak to Our Team"
+    },
+    {
+      "name": "Penetration Testing",
+      "description": "Red team and grey-box assessments across web, mobile, API, cloud, and OT/SCADA environments — surfacing real attacker pathways before adversaries do.",
+      "sections": [
+        {
+          "title": "Assessment Types",
+          "paragraphs": [
+            "We adapt our methodology to your environment and threat model, not the other way around. Every engagement is scoped to surface the pathways that matter to your adversaries."
+          ],
+          "items": [
+            "a Web Application Full OWASP-aligned assessment including business logic flaws, auth bypass, and injection vulnerabilities.",
+            "b Mobile (Android & iOS) Static and dynamic analysis of mobile applications, including secure storage and API communication.",
+            "c API Security REST, GraphQL, and SOAP endpoint assessment — authentication, rate limiting, and data exposure.",
+            "d Network & Infrastructure External and internal network penetration testing, Active Directory review, and lateral movement analysis.",
+            "e Cloud Environments AWS, Azure, and GCP configuration exploitation, privilege escalation, and data exfiltration pathways.",
+            "f OT / SCADA Industrial control system assessment with operational safety as a primary constraint throughout."
+          ]
+        },
+        {
+          "title": "Our Engagement Process",
+          "paragraphs": [],
+          "items": [
+            "01 Threat Modelling We begin by profiling your likely adversaries — nation-state, criminal, or insider — to ensure the engagement simulates realistic attack scenarios, not theoretical ones.",
+            "02 Controlled Exploitation Vulnerabilities are chained to demonstrate real business impact. We pursue attacker pathways end-to-end where permitted by scope.",
+            "03 Evidence-Based Reporting Every finding includes proof-of-concept evidence, business impact assessment, and prioritised remediation guidance — not just CVSS scores.",
+            "04 Retest & Closure Following remediation, we retest critical findings and issue a closure attestation letter for compliance and board reporting."
+          ]
+        },
+        {
+          "title": "Engagement Outcomes",
+          "paragraphs": [],
+          "items": [
+            "Real attacker pathways documented, not hypothetical risks",
+            "Board-ready reporting for leadership and compliance stakeholders",
+            "Closure attestation letter issued post-remediation retest"
+          ]
+        }
+      ],
+      "text": "Services / Penetration Testing Service 02 Penetration Testing Red team and grey-box assessments across web, mobile, API, cloud, and OT/SCADA environments — surfacing real attacker pathways before adversaries do. Request a Pentest ↗ Assessment Types We adapt our methodology to your environment and threat model, not the other way around. Every engagement is scoped to surface the pathways that matter to your adversaries. a Web Application Full OWASP-aligned assessment including business logic flaws, auth bypass, and injection vulnerabilities. b Mobile (Android & iOS) Static and dynamic analysis of mobile applications, including secure storage and API communication. c API Security REST, GraphQL, and SOAP endpoint assessment — authentication, rate limiting, and data exposure. d Network & Infrastructure External and internal network penetration testing, Active Directory review, and lateral movement analysis. e Cloud Environments AWS, Azure, and GCP configuration exploitation, privilege escalation, and data exfiltration pathways. f OT / SCADA Industrial control system assessment with operational safety as a primary constraint throughout. Our Engagement Process 01 Threat Modelling We begin by profiling your likely adversaries — nation-state, criminal, or insider — to ensure the engagement simulates realistic attack scenarios, not theoretical ones. 02 Controlled Exploitation Vulnerabilities are chained to demonstrate real business impact. We pursue attacker pathways end-to-end where permitted by scope. 03 Evidence-Based Reporting Every finding includes proof-of-concept evidence, business impact assessment, and prioritised remediation guidance — not just CVSS scores. 04 Retest & Closure Following remediation, we retest critical findings and issue a closure attestation letter for compliance and board reporting. Engagement Outcomes Real attacker pathways documented, not hypothetical risks Board-ready reporting for leadership and compliance stakeholders Closure attestation letter issued post-remediation retest \"Security gaps don't announce themselves. Our job is to find them before someone else does.\" Speak to Our Team"
+    },
+    {
+      "name": "Cyber Risk Quantification",
+      "description": "FAIR-based financial modelling that translates technical risk into the language of business — giving boards, CISOs, and insurers the clarity to make informed decisions.",
+      "sections": [
+        {
+          "title": "Why Quantification Matters",
+          "paragraphs": [
+            "Most organisations understand they have cyber risk. Few can answer the question their boards and insurers are asking: how much, and what would it cost? Colour-coded risk matrices don't answer that question. Quantified financial models do.",
+            "We use the FAIR (Factor Analysis of Information Risk) methodology — the international standard for cyber risk quantification — to produce defensible, board-presentable loss exposure models."
+          ],
+          "items": []
+        },
+        {
+          "title": "What We Model",
+          "paragraphs": [],
+          "items": [
+            "a Primary Loss Exposure Direct financial impact of security events including operational disruption, data loss, and recovery costs.",
+            "b Secondary Risk Regulatory fines, reputational damage, customer attrition, and third-party liability exposure.",
+            "c Control Effectiveness Quantified assessment of how current controls reduce loss exposure across the risk landscape.",
+            "d Scenario Modelling Monte Carlo simulation of breach, ransomware, and supply-chain attack scenarios specific to your sector.",
+            "e Insurance Optimisation Coverage gap analysis and premium justification for cyber insurance procurement and renewal.",
+            "f Investment Prioritisation Return-on-security-investment (ROSI) modelling to guide budget allocation decisions."
+          ]
+        },
+        {
+          "title": "Who This Is For",
+          "paragraphs": [
+            "Organisations seeking to move beyond qualitative risk assessments and give leadership a financially defensible view of their cyber exposure."
+          ],
+          "items": []
+        }
+      ],
+      "text": "Services / Cyber Risk Quantification Service 03 Cyber Risk Quantification FAIR-based financial modelling that translates technical risk into the language of business — giving boards, CISOs, and insurers the clarity to make informed decisions. Request a Risk Model ↗ Why Quantification Matters Most organisations understand they have cyber risk. Few can answer the question their boards and insurers are asking: how much, and what would it cost? Colour-coded risk matrices don't answer that question. Quantified financial models do. We use the FAIR (Factor Analysis of Information Risk) methodology — the international standard for cyber risk quantification — to produce defensible, board-presentable loss exposure models. What We Model a Primary Loss Exposure Direct financial impact of security events including operational disruption, data loss, and recovery costs. b Secondary Risk Regulatory fines, reputational damage, customer attrition, and third-party liability exposure. c Control Effectiveness Quantified assessment of how current controls reduce loss exposure across the risk landscape. d Scenario Modelling Monte Carlo simulation of breach, ransomware, and supply-chain attack scenarios specific to your sector. e Insurance Optimisation Coverage gap analysis and premium justification for cyber insurance procurement and renewal. f Investment Prioritisation Return-on-security-investment (ROSI) modelling to guide budget allocation decisions. Who This Is For Organisations seeking to move beyond qualitative risk assessments and give leadership a financially defensible view of their cyber exposure. CISOs & Risk Officers CFOs & Finance Teams Audit Committees Insurance Underwriters Private Equity & M&A Teams Boards of Directors \"Risk without numbers is a feeling. With numbers, it becomes a decision.\" Speak to Our Team"
+    },
+    {
+      "name": "Government & PSU Advisory",
+      "description": "Strategic cybersecurity guidance for central and state bodies, PSUs, and critical national infrastructure — navigating regulatory complexity with sector-specific depth.",
+      "sections": [
+        {
+          "title": "Our Positioning",
+          "paragraphs": [
+            "Government and public sector cybersecurity demands a different lens — one attuned to procurement constraints, regulatory overlaps, political accountability, and the complexity of legacy infrastructure. We have worked across these environments and understand their operating realities."
+          ],
+          "items": []
+        },
+        {
+          "title": "Advisory Domains",
+          "paragraphs": [],
+          "items": [
+            "a CERT-IN Compliance Alignment to CERT-IN directions on information security practices, reporting obligations, and audit requirements.",
+            "b Critical Infrastructure Protection Cybersecurity frameworks for power, transport, water, and telecommunications critical infrastructure.",
+            "c Policy & Regulatory Drafting Technical advisory support for cybersecurity policy formulation and regulatory framework development.",
+            "d Procurement Advisory Technical evaluation support for cybersecurity procurement — RFPs, vendor assessment, and due diligence.",
+            "e CISO & Leadership Advisory Retained advisory for government CISOs and IT leadership on strategic security posture and incident response.",
+            "f OT & Industrial Security Cybersecurity advisory for operational technology environments in PSU manufacturing, utilities, and defence."
+          ]
+        },
+        {
+          "title": "Our Engagement Model",
+          "paragraphs": [],
+          "items": [
+            "01 Mandate Understanding We begin by mapping the regulatory and institutional context specific to the body — understanding accountability lines, existing frameworks, and political constraints.",
+            "02 Gap & Risk Assessment Current-state security posture assessment benchmarked against applicable national and sectoral standards.",
+            "03 Roadmap Development A phased, implementable roadmap — sequenced by risk priority and aligned to budget and procurement realities.",
+            "04 Implementation Support Retained advisory support through implementation — providing continuity from strategy to execution."
+          ]
+        }
+      ],
+      "text": "Services / Government & PSU Advisory Service 04 Government & PSU Advisory Strategic cybersecurity guidance for central and state bodies, PSUs, and critical national infrastructure — navigating regulatory complexity with sector-specific depth. Request Advisory ↗ Our Positioning Government and public sector cybersecurity demands a different lens — one attuned to procurement constraints, regulatory overlaps, political accountability, and the complexity of legacy infrastructure. We have worked across these environments and understand their operating realities. Advisory Domains a CERT-IN Compliance Alignment to CERT-IN directions on information security practices, reporting obligations, and audit requirements. b Critical Infrastructure Protection Cybersecurity frameworks for power, transport, water, and telecommunications critical infrastructure. c Policy & Regulatory Drafting Technical advisory support for cybersecurity policy formulation and regulatory framework development. d Procurement Advisory Technical evaluation support for cybersecurity procurement — RFPs, vendor assessment, and due diligence. e CISO & Leadership Advisory Retained advisory for government CISOs and IT leadership on strategic security posture and incident response. f OT & Industrial Security Cybersecurity advisory for operational technology environments in PSU manufacturing, utilities, and defence. Our Engagement Model 01 Mandate Understanding We begin by mapping the regulatory and institutional context specific to the body — understanding accountability lines, existing frameworks, and political constraints. 02 Gap & Risk Assessment Current-state security posture assessment benchmarked against applicable national and sectoral standards. 03 Roadmap Development A phased, implementable roadmap — sequenced by risk priority and aligned to budget and procurement realities. 04 Implementation Support Retained advisory support through implementation — providing continuity from strategy to execution. \"Public sector security requires institutional understanding, not just technical expertise.\" Speak to Our Team"
+    },
+    {
+      "name": "Security Team Building",
+      "description": "End-to-end talent acquisition, university partnerships, and team structuring for organisations scaling their internal security function — from first hire to mature SOC.",
+      "sections": [
+        {
+          "title": "The Challenge We Solve",
+          "paragraphs": [
+            "Hiring in cybersecurity is uniquely difficult. The candidate pool is shallow, credentials are unreliable signals, and the cost of a poor hire in a security function is outsized. Organisations building or scaling security teams need a partner who understands both the domain and the talent landscape."
+          ],
+          "items": []
+        },
+        {
+          "title": "What We Provide",
+          "paragraphs": [],
+          "items": [
+            "a Team Structure Design Role definition, reporting lines, and team topology design aligned to your threat environment and maturity stage.",
+            "b Talent Acquisition End-to-end hiring support — sourcing, technical assessment, and onboarding — with domain-specific evaluation criteria.",
+            "c University Partnerships Structured engagement with engineering and cybersecurity programmes to build early talent pipelines.",
+            "d Leadership Hiring CISO, Head of Security, and senior SOC lead search — with executive assessment and reference validation.",
+            "e Capability Assessment Assessment of existing team capability gaps and skill development roadmaps for current security personnel.",
+            "f SOC Buildout Full Security Operations Centre design — people, process, and technology — from green field to operational."
+          ]
+        },
+        {
+          "title": "Our Approach",
+          "paragraphs": [],
+          "items": [
+            "01 Current State & Ambition We map where you are — headcount, capability, tooling — against where your threat environment and business ambition require you to be.",
+            "02 Target Operating Model A concrete team design: roles, responsibilities, and the sequencing of hires to build capability without redundancy.",
+            "03 Talent Sourcing & Assessment Domain-literate sourcing and structured technical evaluation — we assess candidates as practitioners, not recruiters.",
+            "04 Onboarding & Retention Structured onboarding programmes and retention frameworks designed for the particular demands of security talent."
+          ]
+        }
+      ],
+      "text": "Services / Security Team Building Service 05 Security Team Building End-to-end talent acquisition, university partnerships, and team structuring for organisations scaling their internal security function — from first hire to mature SOC. Start Building ↗ The Challenge We Solve Hiring in cybersecurity is uniquely difficult. The candidate pool is shallow, credentials are unreliable signals, and the cost of a poor hire in a security function is outsized. Organisations building or scaling security teams need a partner who understands both the domain and the talent landscape. What We Provide a Team Structure Design Role definition, reporting lines, and team topology design aligned to your threat environment and maturity stage. b Talent Acquisition End-to-end hiring support — sourcing, technical assessment, and onboarding — with domain-specific evaluation criteria. c University Partnerships Structured engagement with engineering and cybersecurity programmes to build early talent pipelines. d Leadership Hiring CISO, Head of Security, and senior SOC lead search — with executive assessment and reference validation. e Capability Assessment Assessment of existing team capability gaps and skill development roadmaps for current security personnel. f SOC Buildout Full Security Operations Centre design — people, process, and technology — from green field to operational. Our Approach 01 Current State & Ambition We map where you are — headcount, capability, tooling — against where your threat environment and business ambition require you to be. 02 Target Operating Model A concrete team design: roles, responsibilities, and the sequencing of hires to build capability without redundancy. 03 Talent Sourcing & Assessment Domain-literate sourcing and structured technical evaluation — we assess candidates as practitioners, not recruiters. 04 Onboarding & Retention Structured onboarding programmes and retention frameworks designed for the particular demands of security talent. \"A security programme is only as strong as the people behind it.\" Speak to Our Team"
+    },
+    {
+      "name": "Training & Awareness",
+      "description": "Customised cybersecurity training for employees, leadership, and technical teams — plus university engagement for emerging talent pipelines across the sector.",
+      "sections": [
+        {
+          "title": "Why Human Risk Matters",
+          "paragraphs": [
+            "The majority of successful breaches involve a human element — phishing, social engineering, misconfiguration, or process failure. Technical controls are necessary but not sufficient. A security culture, built through consistent and contextually relevant training, is what closes the gap."
+          ],
+          "items": []
+        },
+        {
+          "title": "Training Programmes",
+          "paragraphs": [],
+          "items": [
+            "a Employee Awareness Phishing simulation, social engineering awareness, and safe digital behaviour — tailored to your organisation's threat profile.",
+            "b Leadership & Board Cyber risk literacy for senior leaders — translating technical threats into governance and strategic decision-making.",
+            "c Technical Deep-Dives Role-specific training for developers, system administrators, and SOC analysts — hands-on and scenario-driven.",
+            "d Incident Response Drills Tabletop exercises and live simulations for security and leadership teams — testing process under realistic pressure.",
+            "e University Programmes Structured engagement with engineering institutions — guest lectures, workshops, and curriculum advisory.",
+            "f Compliance Training Role-specific training aligned to CERT-IN, ISO 27001, RBI, and DPDP Act obligations for audit readiness."
+          ]
+        },
+        {
+          "title": "Our Delivery Model",
+          "paragraphs": [],
+          "items": [
+            "01 Needs Assessment We assess your current training baseline, threat profile, and compliance obligations to design a programme that addresses real gaps, not generic risks.",
+            "02 Programme Design Content is built around your sector, systems, and team profiles — not repurposed generic modules. Each programme is custom-built.",
+            "03 Delivery & Simulation Instructor-led sessions, phishing simulations, and tabletop exercises delivered in-person or virtually — with measurable participation metrics.",
+            "04 Measurement & Iteration Post-training assessment, simulation results tracking, and annual programme reviews to ensure sustained effectiveness."
+          ]
+        },
+        {
+          "title": "Who This Is For",
+          "paragraphs": [],
+          "items": []
+        }
+      ],
+      "text": "Services / Training & Awareness Service 06 Training & Awareness Customised cybersecurity training for employees, leadership, and technical teams — plus university engagement for emerging talent pipelines across the sector. Design a Programme ↗ Why Human Risk Matters The majority of successful breaches involve a human element — phishing, social engineering, misconfiguration, or process failure. Technical controls are necessary but not sufficient. A security culture, built through consistent and contextually relevant training, is what closes the gap. Training Programmes a Employee Awareness Phishing simulation, social engineering awareness, and safe digital behaviour — tailored to your organisation's threat profile. b Leadership & Board Cyber risk literacy for senior leaders — translating technical threats into governance and strategic decision-making. c Technical Deep-Dives Role-specific training for developers, system administrators, and SOC analysts — hands-on and scenario-driven. d Incident Response Drills Tabletop exercises and live simulations for security and leadership teams — testing process under realistic pressure. e University Programmes Structured engagement with engineering institutions — guest lectures, workshops, and curriculum advisory. f Compliance Training Role-specific training aligned to CERT-IN, ISO 27001, RBI, and DPDP Act obligations for audit readiness. Our Delivery Model 01 Needs Assessment We assess your current training baseline, threat profile, and compliance obligations to design a programme that addresses real gaps, not generic risks. 02 Programme Design Content is built around your sector, systems, and team profiles — not repurposed generic modules. Each programme is custom-built. 03 Delivery & Simulation Instructor-led sessions, phishing simulations, and tabletop exercises delivered in-person or virtually — with measurable participation metrics. 04 Measurement & Iteration Post-training assessment, simulation results tracking, and annual programme reviews to ensure sustained effectiveness. Who This Is For All Employees C-Suite & Boards Development Teams SOC Analysts System Administrators University Students \"Technology secures systems. People secure organisations.\" Speak to Our Team"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "NIST Cybersecurity Framework 2.0",
+      "type": "Framework",
+      "description": "Our baseline structure for assessing and communicating security posture in language leadership can act on.",
+      "tags": [
+        "Govern",
+        "Identify",
+        "Protect",
+        "Detect",
+        "Respond",
+        "Recover"
+      ]
+    },
+    {
+      "name": "Zero Trust Architecture (NIST SP 800-207)",
+      "type": "Architecture",
+      "description": "Never trust, always verify. The default posture for every network and identity design we recommend.",
+      "tags": [
+        "Verify Explicitly",
+        "Least Privilege",
+        "Assume Breach"
+      ]
+    },
+    {
+      "name": "ISO/IEC 27001:2022",
+      "type": "Management System",
+      "description": "The international benchmark for an information security management system — what we audit against and help build.",
+      "tags": [
+        "Risk Assessment",
+        "Annex A Controls",
+        "ISMS",
+        "Continual Improvement"
+      ]
+    },
+    {
+      "name": "CIS Critical Security Controls v8",
+      "type": "Controls",
+      "description": "Prioritised, practical safeguards mapped to real-world attack patterns — our default hardening baseline.",
+      "tags": [
+        "Basic",
+        "Foundational",
+        "Organizational",
+        "18 Controls"
+      ]
+    },
+    {
+      "name": "MITRE ATT&CK",
+      "type": "Threat Model",
+      "description": "How we model adversary behaviour in red-team engagements and detection engineering.",
+      "tags": [
+        "Tactics",
+        "Techniques",
+        "Procedures",
+        "Threat-Informed Defense"
+      ]
+    },
+    {
+      "name": "Digital Personal Data Protection Act, 2023",
+      "type": "Regulation — India",
+      "description": "India's data protection law, and what it concretely means for how our clients collect, store, and process data.",
+      "tags": [
+        "Consent",
+        "Fiduciary Duties",
+        "Data Principal Rights",
+        "Breach Notification"
+      ]
+    },
+    {
+      "name": "Security Culture & Human Risk Management",
+      "type": "Human Risk",
+      "description": "The framework behind our people-first belief — because most of the frameworks above only work if the humans using them buy in.",
+      "tags": [
+        "Awareness",
+        "Behaviour",
+        "Culture",
+        "Security Champions"
+      ]
+    }
+  ],
+  "checklists": [
+    {
+      "name": "Identity & Access Hygiene",
+      "description": "Identity is the perimeter now — most breaches start with a compromised or over-privileged account.",
+      "items": [
+        "Enforce MFA on all privileged and external-facing accounts",
+        "Apply least-privilege / just-in-time access via PIM",
+        "Review and remove stale accounts & guest access quarterly",
+        "Enable Conditional Access based on risk signals",
+        "Rotate and vault all service account credentials"
+      ]
+    },
+    {
+      "name": "Email & Phishing Defense",
+      "description": "Still the single most common way in — the fixes are cheap relative to the risk they close.",
+      "items": [
+        "Enforce SPF, DKIM, and DMARC (reject policy) on all sending domains",
+        "Enable Safe Links / Safe Attachments or equivalent sandboxing",
+        "Run quarterly phishing simulations with tracked click-rates",
+        "Flag external senders visibly in the inbox",
+        "Maintain a one-click \"report phishing\" workflow"
+      ]
+    },
+    {
+      "name": "Patch & Vulnerability Management",
+      "description": "Attackers overwhelmingly exploit known, unpatched vulnerabilities — not novel zero-days.",
+      "items": [
+        "Maintain an accurate, current asset inventory",
+        "Patch critical/high CVEs within a defined SLA",
+        "Run authenticated vulnerability scans monthly",
+        "Track exceptions with compensating controls, not silence",
+        "Prioritise by exploitability, not CVSS score alone"
+      ]
+    },
+    {
+      "name": "Backup & Ransomware Recovery",
+      "description": "A backup you haven't tested restoring isn't a backup — it's a hope.",
+      "items": [
+        "Follow the 3-2-1 rule: 3 copies, 2 media types, 1 offsite",
+        "Test full restores quarterly, not just backup completion",
+        "Keep at least one immutable or air-gapped copy",
+        "Document and rehearse a recovery runbook with RTO/RPO targets",
+        "Separate backup admin credentials from domain admin"
+      ]
+    },
+    {
+      "name": "Cloud Configuration Baseline",
+      "description": "Most cloud incidents trace back to misconfiguration, not a novel exploit.",
+      "items": [
+        "No public storage buckets or open management ports by default",
+        "Enforce MFA and Conditional Access at the identity provider layer",
+        "Centralise logging with defined retention",
+        "Apply CIS Benchmarks for each cloud provider in use",
+        "Tag and review unused or orphaned resources monthly"
+      ]
+    },
+    {
+      "name": "Incident Response Readiness",
+      "description": "The plan you write during an incident is worse than the plan you wrote and rehearsed beforehand.",
+      "items": [
+        "Maintain a written, tested IR plan with named roles",
+        "Pre-establish legal, forensics, and PR contacts before an incident",
+        "Define severity tiers and escalation timelines (NIST SP 800-61)",
+        "Run at least one tabletop exercise per year",
+        "Keep an offline copy of the IR plan itself"
+      ]
+    }
+  ],
+  "maturity": [
+    {
+      "name": "Ad Hoc",
+      "description": "Reactive, undocumented, dependent on individuals."
+    },
+    {
+      "name": "Repeatable",
+      "description": "Informal but consistent practices, not yet written down."
+    },
+    {
+      "name": "Defined",
+      "description": "Documented and standardised across the organisation."
+    },
+    {
+      "name": "Managed",
+      "description": "Measured and monitored against defined KPIs."
+    },
+    {
+      "name": "Optimized",
+      "description": "Continuously improved, threat-informed, board-visible."
+    }
+  ],
+  "advisory": [
+    {
+      "name": "Business Strategy",
+      "description": "Planning, roadmap, competitive positioning"
+    },
+    {
+      "name": "Revenue & Growth",
+      "description": "Enterprise, government & PSU pursuits"
+    },
+    {
+      "name": "Strategic Partnerships",
+      "description": "Technology, channel & ecosystem alliances"
+    },
+    {
+      "name": "Service & Portfolio Development",
+      "description": "New, productized, differentiated offerings"
+    },
+    {
+      "name": "Talent & Leadership Hiring",
+      "description": "Curated network, strategic introductions"
+    },
+    {
+      "name": "Digital Marketing",
+      "description": "LinkedIn & market presence management"
+    },
+    {
+      "name": "Founder Advisory",
+      "description": "Critical decisions, hiring, risk, negotiation"
+    },
+    {
+      "name": "Representation, Pitching & Proposals",
+      "description": "Partners with you through to close"
+    }
+  ],
+  "advisoryDetails": [
+    {
+      "name": "Business Strategy",
+      "description": "",
+      "items": [
+        "Annual & quarterly strategic planning",
+        "Business model refinement",
+        "Growth roadmap development",
+        "Competitive positioning in cyber, AI & OT markets",
+        "Market expansion strategy",
+        "Business prioritization"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Revenue & Growth",
+      "description": "",
+      "items": [
+        "Enterprise sales strategy",
+        "Government, PSU & CERT-In sector accounts",
+        "Pipeline review & prioritization",
+        "Pricing strategy for security & advisory work",
+        "Opportunity qualification",
+        "Recurring revenue (retainers, managed services)"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Strategic Partnerships",
+      "description": "",
+      "items": [
+        "Technology alliances (security, AI, OT/ICS vendors)",
+        "Channel partnerships",
+        "System integrator partnerships",
+        "OEM relationships",
+        "Industry & standards-body collaborations",
+        "Ecosystem development"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Service & Portfolio Development",
+      "description": "",
+      "items": [
+        "New offerings across cyber, AI & risk advisory",
+        "Productization (assessment tools, quantification platforms)",
+        "Packaging & positioning for executive buyers",
+        "Market differentiation",
+        "High-margin service development"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Talent & Leadership Hiring",
+      "description": "People First: relationships and talent drive growth as much as strategy does.",
+      "items": [
+        "Access to a curated network of industry leaders and subject matter experts",
+        "Established relationships across the cybersecurity, technology & enterprise ecosystem",
+        "Strategic introductions, facilitated where appropriate",
+        "Support identifying and engaging experienced leadership talent",
+        "Hiring strategy and role definition for critical positions"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Digital Marketing & Market Presence",
+      "description": "Building visibility in parallel with the strategic and revenue work.",
+      "items": [
+        "Ongoing management of LinkedIn & digital marketing channels",
+        "Thought leadership content aligned to firm positioning",
+        "Brand visibility and market presence building",
+        "Content calendar and channel strategy"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Founder Advisory",
+      "description": "Ongoing strategic guidance on:",
+      "items": [
+        "Critical business decisions",
+        "Organizational structure & leadership hiring",
+        "Investment priorities",
+        "Risk management",
+        "Negotiation strategy",
+        "Regulatory & compliance shifts affecting the firm"
+      ],
+      "note": ""
+    },
+    {
+      "name": "Representation, Pitching & Proposals",
+      "description": "We stay in the room through the close — not just the introduction:",
+      "items": [
+        "Proposal development & review for key pursuits",
+        "Executive sales & strategic client discussions",
+        "Client pitches and meetings, end to end through closure"
+      ],
+      "note": "Every instance of representation is scoped to an explicit, written mandate. AnthroPrime does not act, negotiate, or commit on the company's behalf beyond what has been specifically agreed in advance."
+    }
+  ],
+  "advisorySections": [
+    {
+      "title": "Why every founder needs an external perspective.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No matter how capable we are, we cannot objectively see the system we are inside. As a founder grows the business, they become immersed in customers, employees, delivery, hiring, cash flow, firefighting, investor expectations, and daily decisions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Over time, the business begins to consume the founder's attention. The result isn't a lack of intelligence — it's a lack of perspective."
+        },
+        {
+          "type": "paragraph",
+          "text": "The role of a Strategic Growth Advisor is not to work harder than the founder. It is to help the founder see what they cannot see from within the business."
+        }
+      ]
+    },
+    {
+      "title": "The biggest constraint on growth usually isn't effort.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "It's how much the founder is carrying alone — and how much room that leaves to think."
+        },
+        {
+          "type": "paragraph",
+          "text": "As the company grows, the founder becomes:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eventually…"
+        },
+        {
+          "type": "paragraph",
+          "text": "When everyone — including the founder — is busy running the business, no one is left to think about it."
+        },
+        {
+          "type": "paragraph",
+          "text": "That is exactly the space a Strategic Growth Advisor creates."
+        }
+      ]
+    },
+    {
+      "title": "What the engagement is built to achieve.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Accelerate growth"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sustainable growth across security, AI, data, cloud, and technology markets."
+        },
+        {
+          "type": "heading",
+          "text": "Strengthen positioning"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sharper standing against category competitors and within target markets."
+        },
+        {
+          "type": "heading",
+          "text": "Win enterprise & government accounts"
+        },
+        {
+          "type": "paragraph",
+          "text": "Stronger key-account strategy, including PSU pursuits."
+        },
+        {
+          "type": "heading",
+          "text": "Build partnerships"
+        },
+        {
+          "type": "paragraph",
+          "text": "Strategic technology, channel, and ecosystem alliances."
+        },
+        {
+          "type": "heading",
+          "text": "Develop differentiated services"
+        },
+        {
+          "type": "paragraph",
+          "text": "New, defensible offerings and adjacent verticals."
+        },
+        {
+          "type": "heading",
+          "text": "Sharpen decision-making"
+        },
+        {
+          "type": "paragraph",
+          "text": "Better calls under regulatory and compliance pressure."
+        }
+      ]
+    },
+    {
+      "title": "Eight areas of ongoing engagement.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Business Strategy"
+        },
+        {
+          "type": "paragraph",
+          "text": "Planning, roadmap, competitive positioning"
+        },
+        {
+          "type": "heading",
+          "text": "Revenue & Growth"
+        },
+        {
+          "type": "paragraph",
+          "text": "Enterprise, government & PSU pursuits"
+        },
+        {
+          "type": "heading",
+          "text": "Strategic Partnerships"
+        },
+        {
+          "type": "paragraph",
+          "text": "Technology, channel & ecosystem alliances"
+        },
+        {
+          "type": "heading",
+          "text": "Service & Portfolio Development"
+        },
+        {
+          "type": "paragraph",
+          "text": "New, productized, differentiated offerings"
+        },
+        {
+          "type": "heading",
+          "text": "Talent & Leadership Hiring"
+        },
+        {
+          "type": "paragraph",
+          "text": "Curated network, strategic introductions"
+        },
+        {
+          "type": "heading",
+          "text": "Digital Marketing"
+        },
+        {
+          "type": "paragraph",
+          "text": "LinkedIn & market presence management"
+        },
+        {
+          "type": "heading",
+          "text": "Founder Advisory"
+        },
+        {
+          "type": "paragraph",
+          "text": "Critical decisions, hiring, risk, negotiation"
+        },
+        {
+          "type": "heading",
+          "text": "Representation, Pitching & Proposals"
+        },
+        {
+          "type": "paragraph",
+          "text": "Partners with you through to close"
+        }
+      ]
+    },
+    {
+      "title": "Business strategy & revenue growth.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Business Strategy"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Annual & quarterly strategic planning",
+            "Business model refinement",
+            "Growth roadmap development",
+            "Competitive positioning in cyber, AI & OT markets",
+            "Market expansion strategy",
+            "Business prioritization"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Revenue & Growth"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Enterprise sales strategy",
+            "Government, PSU & CERT-In sector accounts",
+            "Pipeline review & prioritization",
+            "Pricing strategy for security & advisory work",
+            "Opportunity qualification",
+            "Recurring revenue (retainers, managed services)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Partnerships & service development.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Strategic Partnerships"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Technology alliances (security, AI, OT/ICS vendors)",
+            "Channel partnerships",
+            "System integrator partnerships",
+            "OEM relationships",
+            "Industry & standards-body collaborations",
+            "Ecosystem development"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Service & Portfolio Development"
+        },
+        {
+          "type": "list",
+          "items": [
+            "New offerings across cyber, AI & risk advisory",
+            "Productization (assessment tools, quantification platforms)",
+            "Packaging & positioning for executive buyers",
+            "Market differentiation",
+            "High-margin service development"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Talent, hiring & market presence.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Talent & Leadership Hiring"
+        },
+        {
+          "type": "paragraph",
+          "text": "People First: relationships and talent drive growth as much as strategy does."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Access to a curated network of industry leaders and subject matter experts",
+            "Established relationships across the cybersecurity, technology & enterprise ecosystem",
+            "Strategic introductions, facilitated where appropriate",
+            "Support identifying and engaging experienced leadership talent",
+            "Hiring strategy and role definition for critical positions"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Digital Marketing & Market Presence"
+        },
+        {
+          "type": "paragraph",
+          "text": "Building visibility in parallel with the strategic and revenue work."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Ongoing management of LinkedIn & digital marketing channels",
+            "Thought leadership content aligned to firm positioning",
+            "Brand visibility and market presence building",
+            "Content calendar and channel strategy"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Founder advisory & joint representation.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Founder Advisory"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ongoing strategic guidance on:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Critical business decisions",
+            "Organizational structure & leadership hiring",
+            "Investment priorities",
+            "Risk management",
+            "Negotiation strategy",
+            "Regulatory & compliance shifts affecting the firm"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Representation, Pitching & Proposals"
+        },
+        {
+          "type": "paragraph",
+          "text": "We stay in the room through the close — not just the introduction:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Proposal development & review for key pursuits",
+            "Executive sales & strategic client discussions",
+            "Client pitches and meetings, end to end through closure"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "A long-term strategic partnership, not project work.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The engagement is structured as a long-term strategic partnership rather than project-based consulting, with a consistent cadence of access and review."
+        },
+        {
+          "type": "paragraph",
+          "text": "WEEKLY"
+        },
+        {
+          "type": "heading",
+          "text": "Founder Strategy Session"
+        },
+        {
+          "type": "paragraph",
+          "text": "Direct, recurring access to think through live decisions."
+        },
+        {
+          "type": "paragraph",
+          "text": "MONTHLY"
+        },
+        {
+          "type": "heading",
+          "text": "Leadership Review"
+        },
+        {
+          "type": "paragraph",
+          "text": "Progress against priorities with the leadership team."
+        },
+        {
+          "type": "paragraph",
+          "text": "QUARTERLY"
+        },
+        {
+          "type": "heading",
+          "text": "Business Strategy Workshop"
+        },
+        {
+          "type": "paragraph",
+          "text": "Step back and reset the roadmap for the quarter ahead."
+        },
+        {
+          "type": "paragraph",
+          "text": "ONGOING"
+        },
+        {
+          "type": "heading",
+          "text": "Strategic Discussions"
+        },
+        {
+          "type": "paragraph",
+          "text": "As-needed input on key opportunities & decisions."
+        }
+      ]
+    },
+    {
+      "title": "What you receive — and what stays out of scope.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Deliverables"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Strategic business roadmap",
+            "Quarterly growth plans",
+            "Market expansion recommendations",
+            "Sales & partnership strategy",
+            "Service portfolio recommendations",
+            "Talent pipeline & hiring shortlists",
+            "LinkedIn / digital marketing calendar",
+            "Proposal & pitch support for key pursuits",
+            "Executive decision support",
+            "Strategic opportunity assessments",
+            "Business review reports"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Outside the Scope"
+        },
+        {
+          "type": "paragraph",
+          "text": "Unless separately agreed:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Project execution",
+            "Operational management",
+            "Delivery management",
+            "HR administration (payroll, statutory compliance)",
+            "Financial accounting",
+            "Routine sales administration (CRM, scheduling)",
+            "Day-to-day operational responsibilities"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Note: hiring & proposal strategy support (left) is distinct from ongoing HR and sales administration above."
+        }
+      ]
+    },
+    {
+      "title": "A network built on pedigree and real operating experience.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The relationships and introductions referenced earlier draw on a network spanning:"
+        },
+        {
+          "type": "heading",
+          "text": "IIT Startup Founders"
+        },
+        {
+          "type": "paragraph",
+          "text": "Operators who have built and scaled technology ventures from the ground up"
+        },
+        {
+          "type": "heading",
+          "text": "IIT Faculty"
+        },
+        {
+          "type": "paragraph",
+          "text": "Academic and research depth across engineering and emerging technology"
+        },
+        {
+          "type": "heading",
+          "text": "IIM Alumni"
+        },
+        {
+          "type": "paragraph",
+          "text": "Management and strategy grounding from India's leading business schools"
+        },
+        {
+          "type": "heading",
+          "text": "Telecom & IT Veterans"
+        },
+        {
+          "type": "paragraph",
+          "text": "Senior operators with deep sector experience in telecom and enterprise IT"
+        },
+        {
+          "type": "heading",
+          "text": "Global CXOs"
+        },
+        {
+          "type": "paragraph",
+          "text": "C-suite leaders with operating experience inside and outside India"
+        }
+      ]
+    },
+    {
+      "title": "Best suited for founder-led organizations in.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Cybersecurity Firms"
+        },
+        {
+          "type": "paragraph",
+          "text": "VAPT, GRC, SOC, audit & advisory"
+        },
+        {
+          "type": "heading",
+          "text": "AI Companies"
+        },
+        {
+          "type": "paragraph",
+          "text": "AI-enabled service providers"
+        },
+        {
+          "type": "heading",
+          "text": "Data & Cloud Platforms"
+        },
+        {
+          "type": "paragraph",
+          "text": "Analytics, infrastructure & managed cloud providers"
+        },
+        {
+          "type": "heading",
+          "text": "OT & Industrial Technology"
+        },
+        {
+          "type": "paragraph",
+          "text": "ICS/SCADA, critical infrastructure"
+        },
+        {
+          "type": "heading",
+          "text": "Telecom & Digital Infrastructure"
+        },
+        {
+          "type": "paragraph",
+          "text": "Network & connectivity providers"
+        },
+        {
+          "type": "heading",
+          "text": "Technology Product Companies"
+        },
+        {
+          "type": "paragraph",
+          "text": "Platform & product-led businesses"
+        },
+        {
+          "type": "heading",
+          "text": "Engineering & Consulting Firms"
+        },
+        {
+          "type": "paragraph",
+          "text": "Technical advisory organizations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Also well suited for businesses preparing for rapid growth, investment, or market expansion."
+        }
+      ]
+    },
+    {
+      "title": "An advisor who has built in your category — not alongside it.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "AnthroPrime combines operator-level leadership experience across cybersecurity, AI, data, cloud, and OT advisory with deep expertise in digital transformation, strategic partnerships, enterprise and government sales, governance, and business growth — backed by a bench of industry veterans and qualified specialists supporting hiring, marketing, and go-to-market execution alongside the advisory itself."
+        },
+        {
+          "type": "paragraph",
+          "text": "We don't step back once the introduction is made or the strategy is set. We stay in the room — through the pitch, the proposal, and the close."
+        },
+        {
+          "type": "paragraph",
+          "text": "A catalyst and partner in your growth journey."
+        }
+      ]
+    }
+  ],
+  "about": [
+    "AnthroPrime Technology delivers elite consulting across AI, data, cloud, and cybersecurity — built on a simple conviction: lasting advantage comes from standing shoulder to shoulder with our clients, not handing over a deck. Adopters are human, systems are built by humans, and the organisations we work with are made of people.",
+    "We're deliberately selective, so every engagement gets senior attention and enterprise-grade technical rigour — paired with the organisational empathy that makes recommendations actually stick."
+  ],
+  "approach": [
+    {
+      "name": "Discover",
+      "description": "We map your organisational context, technical landscape, and regulatory obligations before prescribing anything."
+    },
+    {
+      "name": "Assess",
+      "description": "Technical audits and structured risk or opportunity modelling translate findings into financial and business impact."
+    },
+    {
+      "name": "Build",
+      "description": "Prioritised, actionable roadmaps — not just reports. Senior people build the capability alongside your team, not for you."
+    },
+    {
+      "name": "Sustain",
+      "description": "Ongoing advisory relationships that evolve as your organisation, your stack, and the landscape change."
+    }
+  ],
+  "contactForm": "<form id=\"contactForm\" name=\"contact\" method=\"POST\" data-netlify=\"true\" netlify-honeypot=\"bot-field\">\n      <input type=\"hidden\" name=\"form-name\" value=\"contact\">\n      <p class=\"visually-hidden\"><label>Don't fill this out if you're human: <input name=\"bot-field\"></label></p>\n\n      <div class=\"field-row\">\n        <div class=\"field\">\n          <label for=\"fullName\">Full Name <span class=\"req\">*</span></label>\n          <input type=\"text\" id=\"fullName\" name=\"Full Name\" required=\"\" autocomplete=\"name\">\n        </div>\n        <div class=\"field\">\n          <label for=\"workEmail\">Work Email <span class=\"req\">*</span></label>\n          <input type=\"email\" id=\"workEmail\" name=\"Work Email\" required=\"\" autocomplete=\"email\">\n        </div>\n      </div>\n\n      <div class=\"field-row\">\n        <div class=\"field\">\n          <label for=\"phone\">Phone Number</label>\n          <input type=\"tel\" id=\"phone\" name=\"Phone\" autocomplete=\"tel\">\n        </div>\n        <div class=\"field\">\n          <label for=\"company\">Company / Organisation <span class=\"req\">*</span></label>\n          <input type=\"text\" id=\"company\" name=\"Company\" required=\"\">\n        </div>\n      </div>\n\n      <div class=\"field-row\">\n        <div class=\"field\">\n          <label for=\"jobTitle\">Job Title</label>\n          <input type=\"text\" id=\"jobTitle\" name=\"Job Title\">\n        </div>\n        <div class=\"field\">\n          <label for=\"companySize\">Company Size</label>\n          <select id=\"companySize\" name=\"Company Size\">\n            <option value=\"\">Select…</option>\n            <option>1–50 employees</option>\n            <option>51–200 employees</option>\n            <option>201–1000 employees</option>\n            <option>1000+ employees</option>\n            <option>Government / PSU</option>\n          </select>\n        </div>\n      </div>\n\n      <div class=\"field-row\">\n        <div class=\"field\">\n          <label for=\"interest\">Area of Interest</label>\n          <select id=\"interest\" name=\"Area of Interest\">\n            <option>Information Security Auditing</option>\n            <option>Penetration Testing</option>\n            <option>Cyber Risk Quantification</option>\n            <option>AI Security &amp; Red-Teaming</option>\n            <option>Agentic AI for Business</option>\n            <option>Data Architecture &amp; Engineering</option>\n            <option>Data Governance &amp; Compliance</option>\n            <option>Cloud Strategy &amp; Architecture</option>\n            <option>Cloud Migration &amp; Modernisation</option>\n            <option>AI Infrastructure &amp; GPU Sourcing</option>\n            <option>Capacity Readiness Diagnostic</option>\n            <option>Government &amp; PSU Advisory</option>\n            <option>Security Team Building</option>\n            <option>Training &amp; Awareness</option>\n            <option>Strategic Growth Advisory</option>\n            <option>Other</option>\n          </select>\n        </div>\n        <div class=\"field\">\n          <label for=\"preferredContact\">Preferred Contact Method</label>\n          <select id=\"preferredContact\" name=\"Preferred Contact Method\">\n            <option>Email</option>\n            <option>Phone</option>\n            <option>Either</option>\n          </select>\n        </div>\n      </div>\n\n      <div class=\"field\">\n        <label>Nature of Inquiry</label>\n        <div class=\"segmented\" id=\"inquirySegmented\">\n          <input type=\"radio\" id=\"nq1\" name=\"Nature of Inquiry\" value=\"General Inquiry\" checked=\"\">\n          <label for=\"nq1\">General Inquiry</label>\n          <input type=\"radio\" id=\"nq2\" name=\"Nature of Inquiry\" value=\"Request a Proposal\">\n          <label for=\"nq2\">Request a Proposal</label>\n          <input type=\"radio\" id=\"nq4\" name=\"Nature of Inquiry\" value=\"Partnership\">\n          <label for=\"nq4\">Partnership</label>\n        </div>\n      </div>\n\n      <div class=\"field\">\n        <label for=\"message\">Project Details <span class=\"req\">*</span></label>\n        <textarea id=\"message\" name=\"Message\" required=\"\" placeholder=\"Tell us about your environment, timeline, and what you're trying to achieve.\"></textarea>\n      </div>\n\n      <div class=\"consent\">\n        <input type=\"checkbox\" id=\"consent\" name=\"Consent\" required=\"\">\n        <label for=\"consent\">I agree to be contacted by AnthroPrime Technology regarding this inquiry, and understand my details will be handled in line with standard data protection practice.</label>\n      </div>\n\n      <button type=\"submit\" class=\"btn-submit\" id=\"submitBtn\">\n        <span class=\"spinner\"></span>\n        <span class=\"btn-label\">Send Message</span>\n      </button>\n    </form>",
+  "originalText": {
+    "index.html": "AnthroPrime Technology Services Practice Approach Growth Advisory About ECOD Lab Get in touch Get in touch New Strategic Growth Advisory — a long-term partnership for founder-led technology companies. Explore AI · Data · Cloud · Cybersecurity · AI Infrastructure Technology that starts with people. AnthroPrime Technology delivers elite consulting across AI, data, cloud, and cybersecurity — built on a simple conviction: lasting advantage comes from standing shoulder to shoulder with our clients, starting with your problem, not our product. Schedule a consultation Explore capabilities Human First Our founding principle 0 AI, Data, Cloud, Security & Infrastructure Gov + PSU Sector pipeline Scroll — What We Do Five disciplines. One point of view. 01 / AI AI We help you build AI capability and scale applied AI responsibly — from identifying where it creates real value to deploying and governing it across the business. 02 / Data Data We strengthen the data foundations that turn scattered information into lasting advantage — architecture, governance, and analytics that scale with you. 03 / Cloud Cloud We build cloud capability designed around how your teams actually work — strategy, migration, and architecture that strengthen performance. 04 / Security Cybersecurity We strengthen resilience the same way we build every capability — standing shoulder to shoulder on risk and readiness, without the fear-based pitch. 05 / Infrastructure AI Infrastructure We take GPU capacity from workload spec to verified, deployed reality — controlled sourcing and independent technical assurance, not a supplier list. Inside our cybersecurity practice Full-spectrum security consulting One of our five disciplines, in depth. From audit and compliance to risk quantification and team building — our capabilities span the complete security lifecycle for enterprises, government bodies, and critical infrastructure. 01 Information Security Auditing Comprehensive IS audits aligned to CERT-IN frameworks, covering network infrastructure, application security, and organisational controls. Learn more → 02 Penetration Testing Red team and grey-box assessments across web, mobile, API, cloud, and OT/SCADA environments — surfacing real attacker pathways. Learn more → 03 Cyber Risk Quantification FAIR-based financial modelling translates technical risk into business language — for boards, CISOs, and insurers who need clarity. Learn more → 04 Government & PSU Advisory Strategic cybersecurity guidance for central and state bodies, PSUs, and critical national infrastructure — navigating regulatory complexity. Learn more → 05 Security Team Building End-to-end talent acquisition, university partnerships, and team structuring for organisations scaling their internal security function. Learn more → 06 Training & Awareness Customised cybersecurity training for employees, leadership, and technical teams — plus university engagement for emerging talent pipelines. Learn more → Our conviction People first. Technology second. AnthroPrime Technology delivers elite consulting across AI, data, cloud, and cybersecurity — built on a simple conviction: lasting advantage comes from standing shoulder to shoulder with our clients, not handing over a deck. Adopters are human, systems are built by humans, and the organisations we work with are made of people. We're deliberately selective, so every engagement gets senior attention and enterprise-grade technical rigour — paired with the organisational empathy that makes recommendations actually stick. A Anthropic — Human First Every engagement begins with understanding the people, culture, and context of the organisation we're working with. P Prime — Uncompromising excellence We operate at the highest standards of technical depth, advisory quality, and honest communication — across every discipline, without exception. T Technology — Rigorous craft Deep technical expertise across AI, data, cloud, and security — one point of view spanning the full modern stack. How we work Shoulder to shoulder, not at arm's length No fixed methodology gets forced onto your business. Every engagement — in AI, data, cloud, or security — begins with listening to your context, your constraints, and your people, before we prescribe a single solution. 1 Discover We map your organisational context, technical landscape, and regulatory obligations before prescribing anything. 2 Assess Technical audits and structured risk or opportunity modelling translate findings into financial and business impact. 3 Build Prioritised, actionable roadmaps — not just reports. Senior people build the capability alongside your team, not for you. 4 Sustain Ongoing advisory relationships that evolve as your organisation, your stack, and the landscape change. Start the conversation Ready to put people at the centre of technology? Whether you're scaling applied AI, strengthening your data foundations, modernising your cloud, or preparing for a security audit — we're here. Schedule a consultation hello@anthroprime.com AnthroPrime Technology Human First · © 2026 AnthroPrime Technology Services Practice Approach Growth Advisory About AnthroPrime Technology Back to site Our Services 01 Information Security Auditing 02 Penetration Testing 03 Cyber Risk Quantification 04 Government & PSU Advisory 05 Security Team Building 06 Training & Awareness Services / Information Security Auditing Service 01 Information Security Auditing Comprehensive IS audits aligned to CERT-IN frameworks, covering network infrastructure, application security, and organisational controls — providing the assurance your stakeholders require. Request an Audit ↗ What We Audit Our IS audits go beyond checkbox compliance. We assess your security posture with the depth that regulatory bodies and enterprise boards expect, producing findings that are actionable, not merely documented. a Network Infrastructure Perimeter defences, segmentation, firewall rulesets, and internal traffic flows. b Application Security Web, mobile, and API-layer security review against OWASP and custom threat models. c Organisational Controls Policies, access governance, vendor risk, and incident response maturity. d Cloud & Hybrid Environments Configuration review for AWS, Azure, GCP, and private cloud deployments. e Compliance Alignment Gap assessment against CERT-IN, ISO 27001, RBI guidelines, and sectoral mandates. f Third-Party & Supply Chain Vendor security posture and supply chain exposure review. Our Methodology 01 Scoping & Asset Discovery We define audit boundaries in collaboration with your team, cataloguing systems, data flows, and critical assets to ensure nothing material is out of scope. 02 Evidence Collection & Review Configuration review, documentation analysis, and stakeholder interviews form the evidential base — supplemented by technical testing where required. 03 Risk-Rated Findings Every finding is rated by severity and business impact, with remediation guidance prioritised by risk exposure rather than ease of fix. 04 Audit Report & Walkthrough A detailed report for your technical team and an executive summary for leadership — both delivered with a debrief session. Who This Is For Organisations required to demonstrate IS compliance — or those seeking independent assurance before major transactions, audits, or regulatory interactions. Banks & NBFCs Insurance Companies Listed Enterprises Central PSUs Critical Infrastructure Healthcare Providers \"Compliance is the floor, not the ceiling — we help you understand the distance between the two.\" Speak to Our Team Services / Penetration Testing Service 02 Penetration Testing Red team and grey-box assessments across web, mobile, API, cloud, and OT/SCADA environments — surfacing real attacker pathways before adversaries do. Request a Pentest ↗ Assessment Types We adapt our methodology to your environment and threat model, not the other way around. Every engagement is scoped to surface the pathways that matter to your adversaries. a Web Application Full OWASP-aligned assessment including business logic flaws, auth bypass, and injection vulnerabilities. b Mobile (Android & iOS) Static and dynamic analysis of mobile applications, including secure storage and API communication. c API Security REST, GraphQL, and SOAP endpoint assessment — authentication, rate limiting, and data exposure. d Network & Infrastructure External and internal network penetration testing, Active Directory review, and lateral movement analysis. e Cloud Environments AWS, Azure, and GCP configuration exploitation, privilege escalation, and data exfiltration pathways. f OT / SCADA Industrial control system assessment with operational safety as a primary constraint throughout. Our Engagement Process 01 Threat Modelling We begin by profiling your likely adversaries — nation-state, criminal, or insider — to ensure the engagement simulates realistic attack scenarios, not theoretical ones. 02 Controlled Exploitation Vulnerabilities are chained to demonstrate real business impact. We pursue attacker pathways end-to-end where permitted by scope. 03 Evidence-Based Reporting Every finding includes proof-of-concept evidence, business impact assessment, and prioritised remediation guidance — not just CVSS scores. 04 Retest & Closure Following remediation, we retest critical findings and issue a closure attestation letter for compliance and board reporting. Engagement Outcomes Real attacker pathways documented, not hypothetical risks Board-ready reporting for leadership and compliance stakeholders Closure attestation letter issued post-remediation retest \"Security gaps don't announce themselves. Our job is to find them before someone else does.\" Speak to Our Team Services / Cyber Risk Quantification Service 03 Cyber Risk Quantification FAIR-based financial modelling that translates technical risk into the language of business — giving boards, CISOs, and insurers the clarity to make informed decisions. Request a Risk Model ↗ Why Quantification Matters Most organisations understand they have cyber risk. Few can answer the question their boards and insurers are asking: how much, and what would it cost? Colour-coded risk matrices don't answer that question. Quantified financial models do. We use the FAIR (Factor Analysis of Information Risk) methodology — the international standard for cyber risk quantification — to produce defensible, board-presentable loss exposure models. What We Model a Primary Loss Exposure Direct financial impact of security events including operational disruption, data loss, and recovery costs. b Secondary Risk Regulatory fines, reputational damage, customer attrition, and third-party liability exposure. c Control Effectiveness Quantified assessment of how current controls reduce loss exposure across the risk landscape. d Scenario Modelling Monte Carlo simulation of breach, ransomware, and supply-chain attack scenarios specific to your sector. e Insurance Optimisation Coverage gap analysis and premium justification for cyber insurance procurement and renewal. f Investment Prioritisation Return-on-security-investment (ROSI) modelling to guide budget allocation decisions. Who This Is For Organisations seeking to move beyond qualitative risk assessments and give leadership a financially defensible view of their cyber exposure. CISOs & Risk Officers CFOs & Finance Teams Audit Committees Insurance Underwriters Private Equity & M&A Teams Boards of Directors \"Risk without numbers is a feeling. With numbers, it becomes a decision.\" Speak to Our Team Services / Government & PSU Advisory Service 04 Government & PSU Advisory Strategic cybersecurity guidance for central and state bodies, PSUs, and critical national infrastructure — navigating regulatory complexity with sector-specific depth. Request Advisory ↗ Our Positioning Government and public sector cybersecurity demands a different lens — one attuned to procurement constraints, regulatory overlaps, political accountability, and the complexity of legacy infrastructure. We have worked across these environments and understand their operating realities. Advisory Domains a CERT-IN Compliance Alignment to CERT-IN directions on information security practices, reporting obligations, and audit requirements. b Critical Infrastructure Protection Cybersecurity frameworks for power, transport, water, and telecommunications critical infrastructure. c Policy & Regulatory Drafting Technical advisory support for cybersecurity policy formulation and regulatory framework development. d Procurement Advisory Technical evaluation support for cybersecurity procurement — RFPs, vendor assessment, and due diligence. e CISO & Leadership Advisory Retained advisory for government CISOs and IT leadership on strategic security posture and incident response. f OT & Industrial Security Cybersecurity advisory for operational technology environments in PSU manufacturing, utilities, and defence. Our Engagement Model 01 Mandate Understanding We begin by mapping the regulatory and institutional context specific to the body — understanding accountability lines, existing frameworks, and political constraints. 02 Gap & Risk Assessment Current-state security posture assessment benchmarked against applicable national and sectoral standards. 03 Roadmap Development A phased, implementable roadmap — sequenced by risk priority and aligned to budget and procurement realities. 04 Implementation Support Retained advisory support through implementation — providing continuity from strategy to execution. \"Public sector security requires institutional understanding, not just technical expertise.\" Speak to Our Team Services / Security Team Building Service 05 Security Team Building End-to-end talent acquisition, university partnerships, and team structuring for organisations scaling their internal security function — from first hire to mature SOC. Start Building ↗ The Challenge We Solve Hiring in cybersecurity is uniquely difficult. The candidate pool is shallow, credentials are unreliable signals, and the cost of a poor hire in a security function is outsized. Organisations building or scaling security teams need a partner who understands both the domain and the talent landscape. What We Provide a Team Structure Design Role definition, reporting lines, and team topology design aligned to your threat environment and maturity stage. b Talent Acquisition End-to-end hiring support — sourcing, technical assessment, and onboarding — with domain-specific evaluation criteria. c University Partnerships Structured engagement with engineering and cybersecurity programmes to build early talent pipelines. d Leadership Hiring CISO, Head of Security, and senior SOC lead search — with executive assessment and reference validation. e Capability Assessment Assessment of existing team capability gaps and skill development roadmaps for current security personnel. f SOC Buildout Full Security Operations Centre design — people, process, and technology — from green field to operational. Our Approach 01 Current State & Ambition We map where you are — headcount, capability, tooling — against where your threat environment and business ambition require you to be. 02 Target Operating Model A concrete team design: roles, responsibilities, and the sequencing of hires to build capability without redundancy. 03 Talent Sourcing & Assessment Domain-literate sourcing and structured technical evaluation — we assess candidates as practitioners, not recruiters. 04 Onboarding & Retention Structured onboarding programmes and retention frameworks designed for the particular demands of security talent. \"A security programme is only as strong as the people behind it.\" Speak to Our Team Services / Training & Awareness Service 06 Training & Awareness Customised cybersecurity training for employees, leadership, and technical teams — plus university engagement for emerging talent pipelines across the sector. Design a Programme ↗ Why Human Risk Matters The majority of successful breaches involve a human element — phishing, social engineering, misconfiguration, or process failure. Technical controls are necessary but not sufficient. A security culture, built through consistent and contextually relevant training, is what closes the gap. Training Programmes a Employee Awareness Phishing simulation, social engineering awareness, and safe digital behaviour — tailored to your organisation's threat profile. b Leadership & Board Cyber risk literacy for senior leaders — translating technical threats into governance and strategic decision-making. c Technical Deep-Dives Role-specific training for developers, system administrators, and SOC analysts — hands-on and scenario-driven. d Incident Response Drills Tabletop exercises and live simulations for security and leadership teams — testing process under realistic pressure. e University Programmes Structured engagement with engineering institutions — guest lectures, workshops, and curriculum advisory. f Compliance Training Role-specific training aligned to CERT-IN, ISO 27001, RBI, and DPDP Act obligations for audit readiness. Our Delivery Model 01 Needs Assessment We assess your current training baseline, threat profile, and compliance obligations to design a programme that addresses real gaps, not generic risks. 02 Programme Design Content is built around your sector, systems, and team profiles — not repurposed generic modules. Each programme is custom-built. 03 Delivery & Simulation Instructor-led sessions, phishing simulations, and tabletop exercises delivered in-person or virtually — with measurable participation metrics. 04 Measurement & Iteration Post-training assessment, simulation results tracking, and annual programme reviews to ensure sustained effectiveness. Who This Is For All Employees C-Suite & Boards Development Teams SOC Analysts System Administrators University Students \"Technology secures systems. People secure organisations.\" Speak to Our Team",
+    "anthroprime_services.html": "AnthroPrime Technology Services Practice Approach Growth Advisory About ECOD Lab Get in touch Get in touch Our Services Technology that starts with people. Five integrated services — cybersecurity, AI, data, cloud, and AI infrastructure consulting — built for enterprises, government bodies, and critical infrastructure. Looking for the standards behind the work? See our Practice page. 01 / Cybersecurity 02 / AI Systems 03 / Data 04 / Cloud 05 / AI Infrastructure Consulting Scroll Service 01 Full-spectrum cybersecurity across every layer. From audit and adversarial simulation to managed detection and forensics — covering the complete security lifecycle for modern enterprises and critical infrastructure. Protect Detect Respond 1.1 Information Security Auditing CERT-IN aligned audits across network, application, cloud, and organisational controls. Explore Compliance & Regulatory CERT-IN compliance assessment ISO 27001 readiness & internal audits DPDP Act compliance assessment RBI, SEBI, IRDAI regulatory audits GDPR and global privacy alignment Technical Security Audits Network security audit Application security audit Cloud security audit (AWS, Azure, GCP) Wireless network security assessment Container & endpoint security assessment Active Directory & IAM audit Firewall security review Configuration & hardening assessment Governance & Risk Attack surface discovery Breach & attack simulations Patch management review Security policy & governance review Vendor risk management assessment Incident response readiness assessment Source code review 1.2 Penetration Testing Adversarial simulation across web, mobile, API, network, cloud, and OT/SCADA. Explore Application & API Web application pentest (OWASP Top 10) Mobile application pentest (Android/iOS) API & web services security testing Database security assessment Grey box & black box testing Network & Infrastructure Internal network penetration testing External network penetration testing Cloud penetration testing Wireless network security testing OT / SCADA security testing Reporting & Closure Evidence-based reporting with PoC Business impact assessment Prioritised remediation guidance Retest & closure attestation letter 1.3 Red Team & Simulation Full-scope red team operations, phishing campaigns, and ransomware resiliency testing. Explore Simulation & Testing Red team attack simulation Phishing campaign & simulation Social engineering exercises Physical security testing Breach & attack simulation (BAS) Ransomware resiliency testing Drill & Exercises CyberDrill exercises Tabletop exercises (TTX) Red team vs. Blue team exercises Executive crisis simulation Outcomes Real attacker pathways documented Board-ready reporting Closure attestation post-remediation 1.4 Managed Detection & Response 24/7 SOC-as-a-Service, SIEM, UEBA, threat hunting, and SLA-tracked incident response. Explore Detection & Monitoring 24/7 SOC-as-a-Service Managed Endpoint Detection & Response SIEM & log management UEBA — User & Entity Behaviour Analytics Network Detection & Response (NDR) Managed Operations Managed cloud security Managed AppSec & network security SOAR — Security Orchestration & Automation Security infrastructure management Proactive Defence Proactive threat hunting Vulnerability management Curated threat intelligence SLA-tracked incident response Executive dashboards & KPIs 1.5 Incident Response & Forensics Rapid breach containment, crisis management, and litigation-ready forensic investigation. Explore Incident Response Incident & breach response Cyber crisis management Compromise assessment Malware analysis & eradication IR retainer services IR readiness assessment & playbooks Digital Forensics Device & mobile forensics (Android/iOS) Computer forensics & data recovery Log analysis & RAM dump analysis Malware reverse engineering OSINT & dark web intelligence Legal & Lab Expert witness & litigation support Chain of custody management Forensic lab design & setup Forensic team training & certification 1.6 DevSecOps & Cloud Security Security embedded into CI/CD pipelines, Zero Trust architecture, and cloud-native environments. Explore DevSecOps DevSecOps programme design & implementation CI/CD pipeline security integration SAST / DAST / SCA toolchain setup Secure SDLC framework Developer security training Container & Kubernetes security Cloud & Architecture Zero Trust architecture design Cloud migration security Cloud-native workload security DDoS assessment Transformation Digital transformation advisory Security framework alignment (NIST, ISO, CIS) Technology roadmap advisory Vendor / OEM technology selection 1.7 Cyber Risk Quantification FAIR-based financial modelling that converts technical risk into loss exposure estimates. Explore Risk Modelling FAIR-based financial risk modelling Ransomware & data breach impact modelling Insider threat scenario analysis Control effectiveness analysis Monte Carlo scenario simulation Reporting Executive risk dashboards & heatmaps Board-ready risk reporting Residual risk analysis Investment Advisory Cyber insurance readiness assessment Coverage gap analysis Security investment ROI (ROSI) analysis Budget prioritisation support 1.8 GRC & Compliance End-to-end governance, risk, and compliance across international and Indian regulatory frameworks. Explore International Frameworks ISO 27001 compliance audit ISO 27701 compliance audit SOC 2 compliance audit PCI DSS compliance audit GDPR compliance audit HIPAA / SAMA advisory Indian Regulatory — RBI RBI Information Security audit RBI NBFC / Account Aggregator / PPI / PSS audit RBI P2P lending & Co-operative Bank IS audit RBI Payment Aggregators & Gateway audit Indian Regulatory — SEBI / Others SEBI system & cyber security framework audit IRDAI ISNP audit NPCI / UPI audit UIDAI AUA/KUA (Aadhaar) audit DPDP Act compliance assessment 1.9 Government & PSU Advisory Strategic cybersecurity guidance for central bodies, PSUs, and critical national infrastructure. Explore Policy & Compliance Cybersecurity policy drafting CERT-IN / MeitY regulatory alignment Critical infrastructure security assessment Sectoral compliance support Program & SOC Setup Government SOC setup & advisory Cybersecurity strategy & roadmap for PSUs Security architecture for large-scale govt. systems Risk & Incident Third-party / vendor risk assessment Cyber crisis management Incident response planning Threat intelligence landscape alignment Specialist Practice Domain expertise for specialist environments. Three vertical practices requiring deep sector knowledge — where generic cybersecurity approaches fall short. Cybersecurity 1.10 OT / ICS & IoT Security Securing operational technology, industrial control systems, and connected device environments — with operational safety as a primary constraint. OT / ICS security assessment SCADA security testing Industrial network segmentation review OT vulnerability assessment & risk modelling OT security architecture design (IEC 62443) Cloud-native workload security for OT Cybersecurity 1.11 Telecom Security End-to-end security across 5G core, signaling, fraud, and telecom network infrastructure — for operators navigating next-generation network complexity. 5G core & RAN security assessment SS7 / Diameter signaling security Telecom fraud risk assessment API & roaming security testing Network Exposure Function (NEF) testing Telecom SOC design & advisory Cybersecurity 1.12 Automotive Security Securing the full vehicle lifecycle — from embedded systems and OTA to Automotive SOC and ISO 21434 compliance — for OEMs and Tier 1 suppliers. Automotive TARA (Threat Analysis & Risk) ECU / CAN bus VAPT ISO 21434 & UNECE R155/R156 compliance OTA security assessment Secure SDLC for automotive (AUTOSAR) Automotive SOC design & implementation 01 Discover We map your threat surface, regulatory obligations, and people before prescribing anything. 02 Assess Technical audits and FAIR-based modelling translate vulnerabilities into business impact. 03 Remediate Prioritised, actionable roadmaps — not just reports. We work alongside your team through execution. 04 Sustain Ongoing advisory that evolves as your organisation and the threat landscape change. Service 02 AI that secures, automates, and informs. From securing AI systems to deploying autonomous agents and intelligence platforms — real enterprise outcomes, not pilots. Secure Deploy Govern 2.1 AI Security & Red-Teaming Adversarial testing, prompt injection assessment, and governance for AI-powered systems. Explore Assessment LLM & generative AI risk assessment Adversarial prompt injection testing AI model security evaluation AI supply chain risk assessment Bias, hallucination & output risk review Governance AI risk policy & regulatory alignment Responsible AI framework design AI vendor & model evaluation Why it matters AI systems introduce new attack surfaces Prompt injection is the new SQL injection Boards need defensible AI governance 2.2 Agentic AI for Business Autonomous AI agents driving acquisition, conversion, retention, and support at scale. Explore Agent Capabilities Customer acquisition & conversion agents AI-driven retention & support automation Drop-off detection & recovery workflows Autonomous sales & upsell agents Channels & Deployment WhatsApp, SMS & email automation Voice agent deployment Web & app channel integration Multilingual support Control & Observability AI agent observability & traceability Guardrails & prompt security Performance tracking & testing automation Human escalation workflows 2.3 Data & Business Intelligence Natural language querying, predictive analytics, and AI-powered decision intelligence. Explore Intelligence Platform Natural language querying of operational data Predictive analytics & anomaly detection Live data aggregation across platforms AI-powered decision intelligence Reporting & Automation Automated reporting & executive dashboards Instant alerts & event-based triggers Smart charts & visual reports Integration CRM, ERP & core banking integration Cloud & on-premise deployment Role-based access & data governance 01 Assess Evaluate data maturity, infrastructure, and organisational readiness for AI deployment. 02 Design Architect solutions — agents, platforms, or frameworks — tailored to your context. 03 Deploy Implement with security-first principles, guardrails, and observability built in. 04 Evolve Continuously improve agents and models through measured outcomes and automated testing. Service 03 Data infrastructure that becomes a decision advantage. From fragmented systems to a single source of truth — architecture, governance, and analytics built to scale with the business. Model Govern Activate 3.1 Data Architecture & Engineering Modern data platforms, pipelines, and warehousing built for reliability and scale. Explore Platform & Pipelines ETL / ELT pipeline design Data warehouse & lakehouse architecture Real-time streaming pipelines Legacy data migration Modelling & Storage Dimensional & data vault modelling Master data management Data quality & lineage tooling Reliability Data observability & monitoring Backup & disaster recovery design Cost & performance optimisation 3.2 Data Governance & Compliance Policy, access control, and regulatory alignment for data you can trust and defend. Explore Governance Framework Data governance policy design Data classification & cataloguing Role-based access & stewardship models Regulatory DPDP Act & GDPR data mapping Data retention & residency review Third-party data sharing agreement review Trust Data quality scorecards Privacy impact assessments Consent & preference management 3.3 Analytics & Business Intelligence Dashboards, models, and self-serve analytics that turn data into decisions. Explore Reporting Executive dashboards & scorecards Self-serve BI enablement Automated reporting pipelines Modelling Statistical & predictive modelling Cohort, funnel & retention analysis Forecasting & scenario planning Enablement Analytics tooling rollout (Looker, Power BI, Tableau) Data literacy training KPI framework design 01 Assess Evaluate data maturity, sources, and quality across the organisation. 02 Architect Design the platform, models, and governance structure the business actually needs. 03 Implement Build pipelines, warehouses, and dashboards with reliability and lineage built in. 04 Govern Sustain quality, access control, and compliance as the data estate grows. Service 04 Cloud built around how your teams actually work. Strategy, migration, and architecture across AWS, Azure, and GCP — designed for performance, cost, and resilience, not just uptime. Strategise Migrate Optimise 4.1 Cloud Strategy & Architecture Landing zones, reference architectures, and multi-cloud strategy aligned to business goals. Explore Strategy Cloud readiness assessment Multi-cloud & hybrid strategy Total cost of ownership modelling Architecture Landing zone design Well-architected framework reviews Disaster recovery & business continuity architecture Governance Cloud governance & tagging standards Cost allocation & chargeback models Cloud policy & guardrail design 4.2 Migration & Modernisation Lift-and-shift, replatforming, and application modernisation with minimal disruption. Explore Migration Workload discovery & dependency mapping Lift-and-shift & replatforming Database migration & modernisation Modernisation Containerisation & Kubernetes adoption Serverless & microservices migration Legacy application refactoring Cutover Migration runbooks & rollback planning Cutover testing & validation Post-migration performance tuning 4.3 Cloud Operations & FinOps Ongoing optimisation for cost, performance, and reliability at scale. Explore FinOps Cost visibility & FinOps practice setup Reserved instance & savings plan strategy Idle resource identification Operations Infrastructure as code (Terraform, CDK) CI/CD pipeline design Site reliability engineering support Resilience Auto-scaling & performance tuning Multi-region resilience design Cloud security posture management 01 Assess Baseline current infrastructure, spend, and workload dependencies. 02 Design Architect landing zones and target-state environments built for the business. 03 Migrate Move and modernise workloads with tested runbooks and minimal downtime. 04 Operate Continuously tune cost, performance, and resilience post-migration. Service 05 Verified GPU capacity, from workload to deployment. From workload specification to verified sourcing and post-deployment governance — a controlled process for enterprise GPU capacity, not a supplier list. Diagnose Source Verify Govern 5.1 Capacity Readiness Diagnostic Translate a workload into a comparable spec, TCO range and sourcing plan — in days, not weeks. Explore Workload Analysis Workload specification & sizing GPU / accelerator requirement modelling Comparable spec generation across providers Cost & Planning TCO range modelling Budget & timeline planning Sourcing plan development Output Comparable spec sheet TCO range estimate Sourcing roadmap, delivered in days 5.2 GPU Sourcing A controlled RFQ across a vetted provider panel, negotiated to close on your behalf. Explore Sourcing Process Vetted provider panel curation Controlled RFQ management Competitive, on-your-behalf negotiation Provider Coverage Hyperscalers & neoclouds GPU-specialist & colocation providers Bare-metal & managed capacity options Outcome Negotiated terms, closed on your behalf Transparent, side-by-side pricing comparison 5.3 Technical & Capacity Assurance Independent verification of ownership, topology and live performance before you sign. Explore Verification Ownership & entitlement verification Network & interconnect topology validation Live performance benchmarking Risk Mitigation SLA & contract review Provider financial & operational due diligence Assurance Independent technical validation report Pre-signature sign-off 5.4 Managed Capacity Governance Ongoing SLA, utilization and renewal oversight after deployment. Explore Ongoing Oversight SLA monitoring & enforcement Utilization tracking & optimisation Lifecycle Management Renewal negotiation support Capacity scaling advisory Reporting Governance dashboards Quarterly capacity reviews 01 Diagnose Translate the workload into a comparable spec, TCO range, and sourcing plan. 02 Source Run a controlled RFQ across a vetted GPU provider panel, negotiated on your behalf. 03 Verify Independently verify ownership, topology, and live performance before you sign. 04 Govern Provide ongoing SLA, utilization, and renewal oversight after deployment. Next Steps Ready to put people at the centre of technology? Whether you're preparing for a CERT-IN audit, building an AI capability, modernising your data estate, migrating to the cloud, or sourcing verified GPU capacity — we're here. Schedule a consultation AnthroPrime Technology Human First · © 2026 AnthroPrime Technology Services Practice Approach Growth Advisory About",
+    "practices.html": "AnthroPrime Technology Services Practice Approach Growth Advisory About ECOD Lab Get in touch Get in touch Our Practice The standards we build to — not just sell. Every engagement is anchored to the same recognised frameworks, whether or not it's billable. This page is the reference — the frameworks we practice, and the checklists we hand to clients for free. Looking for what we deliver? See our Services. Scroll Why It's Called a Practice Frameworks are the tools. People are the practice. NIST, ISO, and CIS tell you what \"good\" looks like. They don't patch a server, report a phishing email, or say no to a risky shortcut under deadline pressure — your people do. Every checklist above exists to make that easier for them, not to replace them. 01 Listen First Every engagement starts with the people, culture, and constraints inside your organisation — not a framework checklist applied blind. 02 Plain Language We translate ISO clauses and NIST functions into instructions a non-security employee can actually follow — jargon protects no one. 03 Train the Humans Firewalls don't click phishing links or reuse passwords. We invest as much in awareness and culture as we do in tooling. 04 Stay Alongside Retained advisory through implementation, not a report handed over and forgotten — the same people who assess you help you fix it. Frameworks We Practice A shared vocabulary for security posture. We map every audit, assessment, and roadmap back to a recognised standard — so findings are defensible to a board, a regulator, or an auditor, not just to us. Framework NIST Cybersecurity Framework 2.0 Our baseline structure for assessing and communicating security posture in language leadership can act on. Govern Identify Protect Detect Respond Recover Architecture Zero Trust Architecture (NIST SP 800-207) Never trust, always verify. The default posture for every network and identity design we recommend. Verify Explicitly Least Privilege Assume Breach Management System ISO/IEC 27001:2022 The international benchmark for an information security management system — what we audit against and help build. Risk Assessment Annex A Controls ISMS Continual Improvement Controls CIS Critical Security Controls v8 Prioritised, practical safeguards mapped to real-world attack patterns — our default hardening baseline. Basic Foundational Organizational 18 Controls Threat Model MITRE ATT&CK How we model adversary behaviour in red-team engagements and detection engineering. Tactics Techniques Procedures Threat-Informed Defense Regulation — India Digital Personal Data Protection Act, 2023 India's data protection law, and what it concretely means for how our clients collect, store, and process data. Consent Fiduciary Duties Data Principal Rights Breach Notification Human Risk Security Culture & Human Risk Management The framework behind our people-first belief — because most of the frameworks above only work if the humans using them buy in. Awareness Behaviour Culture Security Champions Practical Checklists Best practice you can act on this week. No audit required. These are the checks we run first on every engagement — tick them off as you go through your own environment. Identity & Access Hygiene 0/5 Identity is the perimeter now — most breaches start with a compromised or over-privileged account. Enforce MFA on all privileged and external-facing accounts Apply least-privilege / just-in-time access via PIM Review and remove stale accounts & guest access quarterly Enable Conditional Access based on risk signals Rotate and vault all service account credentials Email & Phishing Defense 0/5 Still the single most common way in — the fixes are cheap relative to the risk they close. Enforce SPF, DKIM, and DMARC (reject policy) on all sending domains Enable Safe Links / Safe Attachments or equivalent sandboxing Run quarterly phishing simulations with tracked click-rates Flag external senders visibly in the inbox Maintain a one-click \"report phishing\" workflow Patch & Vulnerability Management 0/5 Attackers overwhelmingly exploit known, unpatched vulnerabilities — not novel zero-days. Maintain an accurate, current asset inventory Patch critical/high CVEs within a defined SLA Run authenticated vulnerability scans monthly Track exceptions with compensating controls, not silence Prioritise by exploitability, not CVSS score alone Backup & Ransomware Recovery 0/5 A backup you haven't tested restoring isn't a backup — it's a hope. Follow the 3-2-1 rule: 3 copies, 2 media types, 1 offsite Test full restores quarterly, not just backup completion Keep at least one immutable or air-gapped copy Document and rehearse a recovery runbook with RTO/RPO targets Separate backup admin credentials from domain admin Cloud Configuration Baseline 0/5 Most cloud incidents trace back to misconfiguration, not a novel exploit. No public storage buckets or open management ports by default Enforce MFA and Conditional Access at the identity provider layer Centralise logging with defined retention Apply CIS Benchmarks for each cloud provider in use Tag and review unused or orphaned resources monthly Incident Response Readiness 0/5 The plan you write during an incident is worse than the plan you wrote and rehearsed beforehand. Maintain a written, tested IR plan with named roles Pre-establish legal, forensics, and PR contacts before an incident Define severity tiers and escalation timelines (NIST SP 800-61) Run at least one tabletop exercise per year Keep an offline copy of the IR plan itself Where You Stand A common language for maturity. Every assessment we run places you somewhere on this ladder — and gives you the specific, sequenced steps to move up it. 01 Ad Hoc Reactive, undocumented, dependent on individuals. 02 Repeatable Informal but consistent practices, not yet written down. 03 Defined Documented and standardised across the organisation. 04 Managed Measured and monitored against defined KPIs. 05 Optimized Continuously improved, threat-informed, board-visible. Next Steps Ready to put people at the centre of your practice? If you'd rather have our people run the assessment — and train yours — than run it yourself, that's what our Cybersecurity practice is for. Schedule a consultation See our services AnthroPrime Technology Human First · © 2026 AnthroPrime Technology Services Practice Approach Growth Advisory About",
+    "contact.html": "AnthroPrime Technology Services Practice Approach Growth Advisory About ECOD Lab Get in touch Get in touch Get in touch Let's talk about your technology roadmap. Whether you're scoping a CERT-IN audit, building an AI capability, modernising your data estate, migrating to the cloud, or want a board-ready view of risk — tell us where you are, and we'll tell you what a serious engagement looks like. Technology that starts with people — you'll talk to the people doing the work, not a sales layer. Email hello@anthroprime.com Response time Within 1 business day Status Accepting new engagements Scroll Tell us about your requirement Every field below reaches our team directly — nothing here is outsourced or automated beyond this form. Something went wrong sending your message. Please try again, or email us directly at hello@anthroprime.com. Don't fill this out if you're human: Full Name * Work Email * Phone Number Company / Organisation * Job Title Company Size Select… 1–50 employees 51–200 employees 201–1000 employees 1000+ employees Government / PSU Area of Interest Information Security Auditing Penetration Testing Cyber Risk Quantification AI Security & Red-Teaming Agentic AI for Business Data Architecture & Engineering Data Governance & Compliance Cloud Strategy & Architecture Cloud Migration & Modernisation AI Infrastructure & GPU Sourcing Capacity Readiness Diagnostic Government & PSU Advisory Security Team Building Training & Awareness Strategic Growth Advisory Other Preferred Contact Method Email Phone Either Nature of Inquiry General Inquiry Request a Proposal Partnership Project Details * I agree to be contacted by AnthroPrime Technology regarding this inquiry, and understand my details will be handled in line with standard data protection practice. Send Message Message received. Thank you — our team will get back to you within one business day. Direct Contact Email hello@anthroprime.com What to expect General inquiry 1 business day Proposal request 2 business days Prefer to talk it through? Schedule a consultation call Pick a slot below and add it straight to your Microsoft / Outlook calendar. We'll confirm by email once the request reaches our team — this reserves the slot on our side too. 1 · Choose a date 2 · Choose a time (Indian Standard Time, GMT+5:30) Your Name * Your Email * What would you like to discuss? Booking summary Select a date and time to continue. Add to Outlook Download .ics Confirm & Request This Slot \"Add to Outlook\" and \".ics\" place a tentative hold on your own calendar immediately. Clicking \"Confirm & Request\" also notifies our team so we can lock the slot on our end and follow up with a Teams link. AnthroPrime Technology Human First · © 2026 AnthroPrime Technology Services Practice Approach Growth Advisory About",
+    "strategic-growth-advisor.html": "AnthroPrime Technology Services Practice Approach Growth Advisory About ECOD Lab Get in touch Get in touch Founder & Executive Advisory Strategic Growth Advisor Executive advisory for founder-led cybersecurity, AI, data, cloud & OT technology companies — built for founders who need a partner, not another report. Schedule a consultation See the scope of advisory WeeklyFounder strategy sessions 8 PillarsOf ongoing engagement Through ClosePitch & proposal support RetainerNot hours billed Why this exists Why every founder needs an external perspective. No matter how capable we are, we cannot objectively see the system we are inside. As a founder grows the business, they become immersed in customers, employees, delivery, hiring, cash flow, firefighting, investor expectations, and daily decisions. Over time, the business begins to consume the founder's attention. The result isn't a lack of intelligence — it's a lack of perspective. The role of a Strategic Growth Advisor is not to work harder than the founder. It is to help the founder see what they cannot see from within the business. Outside New Ideas Market Signals Partnerships Strategic Thinking Industry Network Best Practices ↓ THE FOUNDER Sales Hiring Delivery Finance Clients Employees Operations Compliance The founder can see everything inside the box… …but rarely sees the box itself. Why this matters The biggest constraint on growth usually isn't effort. It's how much the founder is carrying alone — and how much room that leaves to think. As the company grows, the founder becomes: CEO Sales Head Delivery Head Recruiter Marketing Head Finance Reviewer Escalation Manager Product Manager HR Strategy Eventually… When everyone — including the founder — is busy running the business, no one is left to think about it. That is exactly the space a Strategic Growth Advisor creates. Objectives What the engagement is built to achieve. 📈 Accelerate growth Sustainable growth across security, AI, data, cloud, and technology markets. 🏢 Strengthen positioning Sharper standing against category competitors and within target markets. 🤝 Win enterprise & government accounts Stronger key-account strategy, including PSU pursuits. 🌐 Build partnerships Strategic technology, channel, and ecosystem alliances. 🧩 Develop differentiated services New, defensible offerings and adjacent verticals. ⚖️ Sharpen decision-making Better calls under regulatory and compliance pressure. Scope of advisory Eight areas of ongoing engagement. 01 📈 Business Strategy Planning, roadmap, competitive positioning 02 🚀 Revenue & Growth Enterprise, government & PSU pursuits 03 🤝 Strategic Partnerships Technology, channel & ecosystem alliances 04 📑 Service & Portfolio Development New, productized, differentiated offerings 05 👥 Talent & Leadership Hiring Curated network, strategic introductions 06 📣 Digital Marketing LinkedIn & market presence management 07 👤 Founder Advisory Critical decisions, hiring, risk, negotiation 08 🎤 Representation, Pitching & Proposals Partners with you through to close Scope of advisory — 1/3 Business strategy & revenue growth. 📈 Business Strategy Annual & quarterly strategic planning Business model refinement Growth roadmap development Competitive positioning in cyber, AI & OT markets Market expansion strategy Business prioritization 🚀 Revenue & Growth Enterprise sales strategy Government, PSU & CERT-In sector accounts Pipeline review & prioritization Pricing strategy for security & advisory work Opportunity qualification Recurring revenue (retainers, managed services) Scope of advisory — 2/3 Partnerships & service development. 🤝 Strategic Partnerships Technology alliances (security, AI, OT/ICS vendors) Channel partnerships System integrator partnerships OEM relationships Industry & standards-body collaborations Ecosystem development 📑 Service & Portfolio Development New offerings across cyber, AI & risk advisory Productization (assessment tools, quantification platforms) Packaging & positioning for executive buyers Market differentiation High-margin service development Scope of advisory — 3/3 Talent, hiring & market presence. 👥 Talent & Leadership Hiring People First: relationships and talent drive growth as much as strategy does. Access to a curated network of industry leaders and subject matter experts Established relationships across the cybersecurity, technology & enterprise ecosystem Strategic introductions, facilitated where appropriate Support identifying and engaging experienced leadership talent Hiring strategy and role definition for critical positions 📣 Digital Marketing & Market Presence Building visibility in parallel with the strategic and revenue work. Ongoing management of LinkedIn & digital marketing channels Thought leadership content aligned to firm positioning Brand visibility and market presence building Content calendar and channel strategy Scope of advisory — founder-facing Founder advisory & joint representation. 👤 Founder Advisory Ongoing strategic guidance on: Critical business decisions Organizational structure & leadership hiring Investment priorities Risk management Negotiation strategy Regulatory & compliance shifts affecting the firm 🎤 Representation, Pitching & Proposals We stay in the room through the close — not just the introduction: Proposal development & review for key pursuits Executive sales & strategic client discussions Client pitches and meetings, end to end through closure Every instance of representation is scoped to an explicit, written mandate. AnthroPrime does not act, negotiate, or commit on the company's behalf beyond what has been specifically agreed in advance. Engagement model A long-term strategic partnership, not project work. The engagement is structured as a long-term strategic partnership rather than project-based consulting, with a consistent cadence of access and review. WEEKLY Founder Strategy Session Direct, recurring access to think through live decisions. MONTHLY Leadership Review Progress against priorities with the leadership team. QUARTERLY Business Strategy Workshop Step back and reset the roadmap for the quarter ahead. ONGOING Strategic Discussions As-needed input on key opportunities & decisions. Deliverables & boundaries What you receive — and what stays out of scope. ✓ Deliverables Strategic business roadmap Quarterly growth plans Market expansion recommendations Sales & partnership strategy Service portfolio recommendations Talent pipeline & hiring shortlists LinkedIn / digital marketing calendar Proposal & pitch support for key pursuits Executive decision support Strategic opportunity assessments Business review reports ✕ Outside the Scope Unless separately agreed: Project execution Operational management Delivery management HR administration (payroll, statutory compliance) Financial accounting Routine sales administration (CRM, scheduling) Day-to-day operational responsibilities Note: hiring & proposal strategy support (left) is distinct from ongoing HR and sales administration above. The bench behind AnthroPrime A network built on pedigree and real operating experience. The relationships and introductions referenced earlier draw on a network spanning: 🎓 IIT Startup Founders Operators who have built and scaled technology ventures from the ground up 📖 IIT Faculty Academic and research depth across engineering and emerging technology 💼 IIM Alumni Management and strategy grounding from India's leading business schools 📡 Telecom & IT Veterans Senior operators with deep sector experience in telecom and enterprise IT 🌐 Global CXOs C-suite leaders with operating experience inside and outside India Ideal clients Best suited for founder-led organizations in. 🔒 Cybersecurity Firms VAPT, GRC, SOC, audit & advisory 🧠 AI Companies AI-enabled service providers 📊 Data & Cloud Platforms Analytics, infrastructure & managed cloud providers 🏭 OT & Industrial Technology ICS/SCADA, critical infrastructure 📡 Telecom & Digital Infrastructure Network & connectivity providers 📑 Technology Product Companies Platform & product-led businesses 🤝 Engineering & Consulting Firms Technical advisory organizations Also well suited for businesses preparing for rapid growth, investment, or market expansion. Why AnthroPrime An advisor who has built in your category — not alongside it. AnthroPrime combines operator-level leadership experience across cybersecurity, AI, data, cloud, and OT advisory with deep expertise in digital transformation, strategic partnerships, enterprise and government sales, governance, and business growth — backed by a bench of industry veterans and qualified specialists supporting hiring, marketing, and go-to-market execution alongside the advisory itself. We don't step back once the introduction is made or the strategy is set. We stay in the room — through the pitch, the proposal, and the close. A catalyst and partner in your growth journey. Schedule a consultation Explore all services AnthroPrime Technology Human First · © 2026 AnthroPrime Technology Services Practice Approach Growth Advisory About"
+  }
+}

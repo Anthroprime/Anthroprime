@@ -1,0 +1,13 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+let build=readFileSync('tools/build.mjs','utf8');
+if(build.includes('terminal-component.mjs'))throw Error('Template migration has already been applied');
+build="import {terminal} from './terminal-component.mjs';\n"+build;
+if(!build.includes('${capability()}</section>${lab()}'))throw Error('Home expertise template not found');
+build=build.replace('${capability()}</section>${lab()}','${capability()}</section>${terminal}${lab()}');
+build=build.replace('<link rel="stylesheet" href="/assets/brand.css">','<link rel="stylesheet" href="/assets/brand.css"><link rel="stylesheet" href="/assets/immersive.css">');
+build=build.replace('<script src="/assets/experience.js" defer></script>','<script src="/assets/experience.js" defer></script><script src="/assets/terminal.js" defer></script>');
+writeFileSync('tools/build.mjs',build);
+let components=readFileSync('tools/brand-components.mjs','utf8');
+components=components.replace('<a class="hero-scroll"','<a class="hero-console-link" href="#command-center"><span aria-hidden="true">&gt;_</span> Enter the intelligence lab <span aria-hidden="true">↗</span></a><a class="hero-scroll"');
+writeFileSync('tools/brand-components.mjs',components);
+console.log('Connected the intelligence lab and immersive design layer.');

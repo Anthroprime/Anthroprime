@@ -1,0 +1,26 @@
+// One-time template migration for the requested brand direction.
+import {readFileSync,writeFileSync} from 'node:fs';
+let build=readFileSync('tools/build.mjs','utf8');
+build="import {brand, hero as brandHero, capability, projectBuilder, guidedFlow} from './brand-components.mjs';\n"+build;
+const oldBrand='<span class="brand-mark" aria-hidden="true">Λ<span>•</span></span><span>anthroprime<span class="brand-dot">.</span></span>';
+if(!build.includes(oldBrand))throw Error('Old brand template not found');
+build=build.replaceAll(oldBrand,'${brand}');
+const heroPattern=/const home = `<section class="hero container">[\s\S]*?\$\{sphere\(\)\}<\/section>/;
+if(!heroPattern.test(build))throw Error('Old hero template not found');
+build=build.replace(heroPattern,'const home = `${brandHero(icon)}');
+build=build.replace('<div class="capability-grid">${cards}</div>','${capability()}');
+build=build.replace('Five disciplines.<br><span class="muted">One extraordinary possibility.</span>','Five disciplines.<br><em>One point of view.</em>');
+build=build.replace('Complex systems.<br><span class="muted">A clearer perspective.</span>','Every connection<br><em>has a purpose.</em>');
+build=build.replace('<div class="lab-bottom">','${guidedFlow}<div class="lab-bottom">');
+build=build.replace('${lab()}<section class="approach-section','${lab()}${projectBuilder()}<section class="approach-section');
+build=build.replace('Alongside your people.<br><span class="muted">From ambition to action.</span>','Shoulder to shoulder.<br><em>From ambition to action.</em>');
+build=build.replace('People first.<br><span class="muted">Progress follows.</span>','<em>People</em> first.<br>Technology second.');
+build=build.replace('Big ambition.<br><span class="muted">Let’s build what’s next.</span>','The next chapter<br><em>starts with you.</em>');
+build=build.replace('data-theme="dark"','data-theme="light"');
+build=build.replace('<link rel="stylesheet" href="/assets/site.css">','<link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/brand.css">');
+build=build.replace('<script src="/assets/site.js" defer></script>','<script src="/assets/site.js" defer></script><script src="/assets/experience.js" defer></script>');
+build=build.replaceAll('https://www.anthroprime.com/assets/logo-512.png','https://www.anthroprime.com/assets/company-logo.jpg').replaceAll('href="/assets/favicon.ico"','href="/assets/company-logo.jpg" type="image/jpeg"').replaceAll('href="/assets/apple-touch-icon.png"','href="/assets/company-logo.jpg"');
+build=build.split('\n').filter(line=>!line.startsWith('const sphere =')&&!line.startsWith('const cards =')).join('\n');
+writeFileSync('tools/build.mjs',build);
+let theme=readFileSync('web/assets/theme.js','utf8').replace("theme:'dark'","theme:'light'");writeFileSync('web/assets/theme.js',theme);
+console.log('Updated templates to brand logo, original palette, and interactive experience components.');

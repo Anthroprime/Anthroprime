@@ -1,0 +1,61 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+[build.environment]
+  NODE_VERSION = "22"
+[[redirects]]
+  from = "/services"
+  to = "/anthroprime_services.html"
+  status = 200
+[[redirects]]
+  from = "/practices"
+  to = "/practices.html"
+  status = 200
+[[redirects]]
+  from = "/growth-advisor"
+  to = "/strategic-growth-advisor.html"
+  status = 200
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/artificial-intelligence"
+  to = "/artificial-intelligence.html"
+  status = 200
+[[redirects]]
+  from = "/data"
+  to = "/data.html"
+  status = 200
+[[redirects]]
+  from = "/cybersecurity"
+  to = "/cybersecurity.html"
+  status = 200
+[[redirects]]
+  from = "/cloud"
+  to = "/cloud.html"
+  status = 200
+[[redirects]]
+  from = "/infrastructure"
+  to = "/infrastructure.html"
+  status = 200
+[[redirects]]
+  from = "/trust"
+  to = "/trust.html"
+  status = 200
+[[redirects]]
+  from = "/data-notice"
+  to = "/data-notice.html"
+  status = 200
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
