@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { readFileSync } from 'node:fs';
 import { resolve, extname, sep } from 'node:path';
 const root=resolve(process.env.SITE_ROOT||'dist');
-const routes={'/trust':'trust.html','/data-notice':'data-notice.html','/':'index.html','/services':'anthroprime_services.html','/practices':'practices.html','/growth-advisor':'strategic-growth-advisor.html','/contact':'contact.html','/data':'data.html','/cybersecurity':'cybersecurity.html','/cloud':'cloud.html','/infrastructure':'infrastructure.html','/artificial-intelligence':'artificial-intelligence.html'};
+const routes={'/trust':'trust.html','/data-notice':'data-notice.html','/':'index.html','/services':'anthroprime_services.html','/practices':'practices.html','/growth-advisor':'strategic-growth-advisor.html','/contact':'contact.html','/labs':'labs.html','/data':'data.html','/cybersecurity':'cybersecurity.html','/cloud':'cloud.html','/infrastructure':'infrastructure.html','/artificial-intelligence':'artificial-intelligence.html'};
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'application/javascript','.svg':'image/svg+xml','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.ico':'image/x-icon','.woff2':'font/woff2','.json':'application/json','.xml':'application/xml','.txt':'text/plain'};
 const responseHeaders=process.env.SITE_ROOT?{}:Object.fromEntries([...readFileSync('netlify.toml','utf8').split('[headers.values]')[1].matchAll(/^\s+([A-Za-z-]+) = "([^"]+)"/gm)].map(match=>[match[1],match[2]]));
 http.createServer(async(req,res)=>{

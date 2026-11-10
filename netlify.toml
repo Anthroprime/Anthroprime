@@ -51,6 +51,10 @@
   from = "/data-notice"
   to = "/data-notice.html"
   status = 200
+[[redirects]]
+  from = "/labs"
+  to = "/labs.html"
+  status = 200
 [[headers]]
   for = "/*"
   [headers.values]

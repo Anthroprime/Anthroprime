@@ -9,7 +9,7 @@ try{await fetch(base);}catch{server=spawn(process.execPath,['tools/serve.mjs'],{
 mkdirSync('artifacts',{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const errors=[],report=[];
-const pages=['/','/services','/practices','/growth-advisor','/contact','/artificial-intelligence','/data','/cybersecurity','/cloud','/infrastructure'];
+const pages=['/','/services','/practices','/growth-advisor','/contact','/labs','/artificial-intelligence','/data','/cybersecurity','/cloud','/infrastructure'];
 let count=0;
 const check=(condition,message)=>{assert.ok(condition,message);count++;};
 try{
@@ -29,6 +29,17 @@ try{
    await context.close();
   }
  }
+
+ const labsContext=await browser.newContext({javaScriptEnabled:false});
+ const labsPage=await labsContext.newPage();
+ await labsPage.goto(base);
+ await labsPage.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:'Labs',exact:true}).click();
+ check(labsPage.url()===base+'/labs','Labs is reachable from the main navigation without JavaScript');
+ check(await labsPage.locator('#navigation a[aria-current=page]').getAttribute('href')==='/labs','Labs is marked as the current page');
+ for(const [name,url] of [['Anthroprime ECOD','https://ecod.anthroprime.com/'],['Anthroprime LMS','https://lms.anthroprime.com/'],['Anthroprime AI','https://anthroprime.ai/']]){
+  check(await labsPage.getByRole('link',{name,exact:true}).getAttribute('href')===url,`${name} links to its site`);
+ }
+ await labsContext.close();
 
  // Dedicated discipline pages have interactive stages, preserved scope and photography.
  const domainContext=await browser.newContext({viewport:{width:1440,height:1000}});const domainTab=await domainContext.newPage();
@@ -95,5 +106,5 @@ try{
  for(const pillar of source.pillars)for(const service of pillar.services){check(html.includes(escape(service.name))&&html.includes(escape(service.description)),`preserved ${service.name}`);for(const group of service.groups)for(const item of group.items)check(html.includes(escape(item)),`preserved scope ${item}`);}
  check(errors.length===0,`Browser errors: ${errors.join('; ')}`);
  writeFileSync('artifacts/qa-report.json',JSON.stringify({assertions:count,errors,accessibility:report},null,2));
- console.log(`PASS: ${count} assertions; ${report.length} accessibility scans; all ten pages at 320, 390, 768 and 1440 pixels; no browser errors.`);
+ console.log(`PASS: ${count} assertions; ${report.length} accessibility scans; ${pages.length} pages at 320, 390, 768 and 1440 pixels; no browser errors.`);
 }finally{writeFileSync('artifacts/accessibility.json',JSON.stringify(report,null,2));await browser.close();server?.kill();}
